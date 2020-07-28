@@ -262,7 +262,7 @@ We also need to create the dependency resolver file so pulsar knows how to find 
 
 > ### {% icon hands_on %} Hands-on: Creating dependency resolver configuration
 >
-> 1. Create a `templates` directory in your working directory.
+> 1. Create a `templates` directory in your working directory if it does not exist.
 >
 >    ```bash
 >    mkdir templates
