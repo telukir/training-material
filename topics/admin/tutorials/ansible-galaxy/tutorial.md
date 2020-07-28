@@ -8,7 +8,7 @@ questions:
 objectives:
 - Have an understanding of how Galaxy's Ansible roles are structured and interact with one another
 - Be able to use an Ansible playbook to install different flavors of Galaxy for different purposes
-time_estimation: "2h"
+time_estimation: "2h30m"
 key_points:
 - Basic deployment with Ansible is surprisingly easy
 - Complexity can grow over time as your organisation does, no need to start with playbooks like UseGalaxy.org
@@ -27,7 +27,7 @@ requirements:
     tutorials:
       - ansible
   - type: "none"
-    title: "A VM with at least 2 vCPUs and 4 GB RAM"
+    title: "A VM with at least 2 vCPUs and 4 GB RAM, preferably running Ubuntu 18.04 - 20.04."
 ---
 
 # Overview
@@ -54,7 +54,7 @@ We want to give you a comprehensive understanding of how the Galaxy installation
 
 ## Configuration
 
-We'll be using the [official Galaxy role](https://github.com/galaxyproject/ansible-galaxy) to install and manage Galaxy. This role is found in [Ansible Galaxy](https://galaxy.ansible.com/) (no relation - it is Ansible's ) as [galaxyproject.galaxy](https://galaxy.ansible.com/galaxyproject/galaxy).
+We'll be using the [official Galaxy role](https://github.com/galaxyproject/ansible-galaxy) to install and manage Galaxy. This role is found in [Ansible Galaxy](https://galaxy.ansible.com/) (no relation - it is Ansible's system for sharing reusable Ansible roles) as [galaxyproject.galaxy](https://galaxy.ansible.com/galaxyproject/galaxy).
 
 The official role is extremely configurable, everything that you want to change is exposed as a variable, and then tasks will change behaviour based on that. The [role documentation](https://github.com/galaxyproject/ansible-galaxy#role-variables) is the most up-to-date source of documentation for the variables. You should take a minute and read over the variables listed there.
 
@@ -71,7 +71,7 @@ The official recommendation is that you should have a variables file such as a `
 
 ## Tasks
 
-As with every role, the entry point for execution is the `tasks/main.yml` file. For the [ansible-galaxy](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/main.yml) file, this includes a few groups of important tasks:
+As with every role, the entry point for execution is the `tasks/main.yml` file. [In the case of the galaxyproject.galaxy role](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/main.yml), this includes a few groups of important tasks:
 
 - [Clone (or Download) Galaxy](#cloning-galaxy)
 - [Managing Configuration](#managing-configuration)
@@ -79,16 +79,18 @@ As with every role, the entry point for execution is the `tasks/main.yml` file. 
 - [Managing Mutable Setup](#mutable-setup)
 - [Managing the Database](#managing-the-database)
 
+The actions each set of tasks performs are described below.
+
 ### Cloning Galaxy
 
-The [clone](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/clone.yml) task is the one which is primarily interesting to us, it downloads Galaxy, using git, to a specific commit.
+The [clone](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/clone.yml) task is the one which is primarily interesting to us, it downloads Galaxy, using git, at a specific commit (or more generally, any [git reference](https://git-scm.com/book/en/v2/Git-Internals-Git-References)).
 
-1. Ansible tries to update Galaxy, cloning it if it is missing, or otherwise attempting to update to the correct commit (or latest commit of that branch.)
+1. Ansible tries to update Galaxy, cloning it if it is missing, or otherwise attempting to update to the correct commit (or latest commit of the given branch).
 2. Any change is reported.
 3. The virtualenv is set up:
     1. An empty virtualenv is created.
     2. Pip is updated within the virtualenv.
-4. Any `.pyc` files are removed, as this can occasionally result in Python loading the cached code, even if the corresponding `.py` file is no more present at the checked-out commit. For safety, all of these are removed.
+4. Any `.pyc` files are removed, as this can occasionally result in Python loading the cached code, even if the corresponding `.py` file is no longer present at the checked-out commit. For safety, all of these are removed.
 
 With that Galaxy is cloned to disk and is ready to be configured by the next task.
 
@@ -101,7 +103,7 @@ The [static configuration setup](https://github.com/galaxyproject/ansible-galaxy
 3. Any templates are copied over
 4. The `galaxy.yml` (or `.ini`) is deployed
 
-The setup for deploying templates and configuration files is a little bit non-standard by Ansible standards. Here you are expected to provide your own templates and static config files, and then describe them as a list of files and where they should be deployed to.
+The setup for deploying extra Galaxy configuration templates and files is a little bit non-standard by Ansible best practices. Here you are expected to provide your own templates and static config files, and then describe them as a list of files and where they should be deployed to.
 
 Using the [UseGalaxy.eu](https://github.com/usegalaxy-eu/infrastructure-playbook/blob/02ca578211bfee45044facf36635d28208e5dbb3/group_vars/galaxy.yml#L578) configuration as an example, we have something like:
 
@@ -117,8 +119,8 @@ galaxy_config_files:
     dest: "{{ galaxy_config.galaxy.datatypes_config_file }}"
   - src: files/galaxy/config/dependency_resolvers_conf.xml
     dest: "{{ galaxy_config.galaxy.dependency_resolvers_config_file }}"
-  - src: files/galaxy/config/disposable_email_blacklist.conf
-    dest: "{{ galaxy_config.galaxy.blacklist_file }}"
+  - src: files/galaxy/config/disposable_email_blocklist.conf
+    dest: "{{ galaxy_config.galaxy.blocklist_file }}"
 ```
 {% endraw %}
 
@@ -133,20 +135,23 @@ galaxy_config:
 ```
 {% endraw %}
 
-So the references in `galaxy_config_files` to `galaxy_config` are done to ensure that the setting for e.g. "location of the blacklist file" is the same between where we have configured Galaxy to looking for it, and where the file has been deployed, without requiring us to make variables changes in numerous places.
+So the references in `galaxy_config_files` to `galaxy_config` are done to ensure that the setting for e.g. "location of the datatypes config file" is the same between where we have configured Galaxy to looking for it, and where the file has been deployed, without requiring us to make variables changes in numerous places.
+
+> ### {% icon tip %} Define once, reference many times
+> Using practices like those shown above helps to avoid problems caused when paths are defined differently in multiple places. The datatypes config file will be copied to the same path as Galaxy is configured to find it in, because that path is only defined in one place. Everything else is a reference to the original definition! If you ever need to update that definition, everything else will be updated accordingly.
+{: .tip}
 
 ### Dependencies
 
 Now that Galaxy is available on disk, Ansible is ready to start processing [dependencies](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/dependencies.yml) of Galaxy.
 
-1. The virtualenv is updated with data from the `galaxy_requirements_file`, by default pointing to the requirements file in the codebase: {% raw %}`{{ galaxy_server_dir  }}/lib/galaxy/dependencies/pinned-requirements.txt`.{% endraw %}
+1. The virtualenv is updated with data from the `galaxy_requirements_file`, by default pointing to the requirements file in the codebase: {% raw %}`{{ galaxy_server_dir }}/lib/galaxy/dependencies/pinned-requirements.txt`.{% endraw %}
 2. Any necessary conditional dependencies of Galaxy are [collected by processing the config file](https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/dependencies/__init__.py)
-2. and then installed to the virtualenv.
+3. and then installed to the virtualenv.
 
 ### Mutable Setup
 
-[This task](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/mutable_setup.yml) creates a directory and deploys any hand-managed mutable configuration files. It is unlikely that you want to manage these, as Galaxy does a sufficient job. Any changes you make to Galaxy like installing tools would result in the tools being "forgotten about", if you re-ran the playbook and overwrote that file.
-
+[This task](https://github.com/galaxyproject/ansible-galaxy/blob/master/tasks/mutable_setup.yml) creates a directory and initializes "mutable" (written/managed by Galaxy itself) configuration files. It also deploys any hand-managed mutable config files, but it is unlikely that you want to manage these directly, as Galaxy does a sufficient job. Any changes you make to Galaxy, for example installing some tools, would result in the tools being "forgotten about", if you re-ran the playbook and overwrote the `shed_tool_conf.xml` mutable config file with a hand-managed one.
 
 ### Managing the Database
 
@@ -183,7 +188,7 @@ best practices and knowledge from previous admins codified for you.
 
 # Installing Galaxy
 
-With the necessary background in place, you are ready to install Galaxy with Ansible. The playbooks will start simple, and grow over time. We will start with the minimal Galaxy playbook which only requires setting the `galaxy_server_dir` and expand from there. First, however, we need a database for Galaxy to connect to, so we will do that now.
+With the necessary background in place, you are ready to install Galaxy with Ansible. The playbooks will start simple, and grow over time. We will start with the minimal Galaxy playbook which only requires setting the `galaxy_root` and expand from there. First, however, we need a database for Galaxy to connect to, so we will do that now.
 
 To proceed from here it is expected that:
 
@@ -278,7 +283,7 @@ We have codified all of the dependencies you will need into a YAML file that `an
 >
 >    Pipelining will make [ansible run faster](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-pipelining) by significantly reducing the number of new SSH connections that must be opened.
 >
-> 2. Create the `hosts` inventory file if you have not done so, include a group for `[galaxyservers]` with the address of the host where you want to install Galaxy. Remember, if you are running ansible on the same machine as Galaxy will be installed to, you should set `ansible_connection=local`.
+> 2. Create the `hosts` inventory file if you have not done so, include a group for `[galaxyservers]` with the address of the host where you want to install Galaxy. If you are running ansible on the same machine as Galaxy will be installed to, you should set `ansible_connection=local`.
 >
 >    > > ### {% icon code-in %} Input: Bash
 >    > > ```bash
@@ -413,7 +418,7 @@ For this tutorial, we will use the default "peer" authentication, so we need to 
 >    {: .tip}
 >
 >    > ### {% icon tip %} Is the YAML sensitive to True/true/False/false
->    > By [this references](https://yaml.org/refcard.html), YAML doesn't really care:
+>    > By [this reference](https://yaml.org/refcard.html), YAML doesn't really care:
 >    > ```
 >    > { Y, true, Yes, ON   }    : Boolean true
 >    > { n, FALSE, No, off  }    : Boolean false
@@ -1451,7 +1456,7 @@ The configuration is quite simple thanks to the many sensible defaults that are 
 > 6. Access at port `<ip address>:8080` once the server has started
 {: .hands_on}
 
-Galaxy is now configured with an admin user, a database, and a place to store data. Additionally we've immediately configured the mules for production Galaxy serving. So we're ready to set up systemd which will manage the Galaxy processes!. Get back to your user with which you have ran ansible-playbook. First by deactivating virtual environment with `deactivate` and then with `exit` leave galaxy user. 
+Galaxy is now configured with an admin user, a database, and a place to store data. Additionally we've immediately configured the mules for production Galaxy serving. So we're ready to set up systemd which will manage the Galaxy processes!. Get back to your user with which you have ran ansible-playbook. First by deactivating virtual environment with `deactivate` and then with `exit` leave galaxy user.
 
 ## systemd
 
@@ -1853,6 +1858,122 @@ For this, we will use NGINX. It is possible to configure Galaxy with Apache and 
 Now that your production-ready Galaxy is running, try registering a new user and logging in!
 
 In order to be the administrator user, you will need to register an account with the same email address you used in the group variables under the `admin_users` setting.
+
+## Job Configuration
+
+One of the most important configuration files for a large Galaxy server is the `job_conf.xml` file. This file tells Galaxy where to run all of the jobs that users execute. If Galaxy can't find a job conf file or none has been specified in the `galaxy.yml` file, it will use a default configuration, `job_conf.xml.sample_basic` file. This file is deployed to `/srv/galaxy/server/lib/galaxy/config/sample/job_conf.xml.sample_basic` (or see it [in the codebase](https://github.com/galaxyproject/galaxy/blob/release_20.05/lib/galaxy/config/sample/job_conf.xml.sample_basic)), though there is a symlink to the file in `/srv/galaxy/server/config`.
+
+The job configuration file allows Galaxy to run jobs in multiple locations using a variety of different mechanisms. Some of these mechanisms include:
+
+* Local - Galaxy runs jobs on the same computer that Galaxy itself is running on.
+* DRMAA - Galaxy can connect to a cluster and submit jobs via a distributed resource manager such as Slurm, Condor, PBS Torque or Sun Grid Engine.
+* Pulsar - Galaxy can also send jobs to remote compute hosts over the internet using Pulsar.
+
+### The job conf file - basics
+
+The `job_conf.xml` file has three basic sections:
+
+* **Plugins** - This section lists the types of job management systems that this Galaxy server is configured to use, and tells Galaxy to load the drivers for each type.
+* **Destinations** - This section lists the different locations, queues, etc. that Galaxy can send jobs to. Each one has a name and uses a *plugin* to communicate with that location. They can specify things like the number of CPUs, amount of RAM to be allocated, etc. for DRMAA locations. Usually, one of the destinations is set to be the default.
+* **Tools** - This section lists the various tools that you would like to send to a non-default *destination*. Each line in this section pairs up a tool in Galaxy with a particular job *destination*. Every time Galaxy gets a job for that particular tool, it is always sent to that *destination*.
+
+The basic `job_conf.xml` file looks like this:
+
+{% raw %}
+```xml
+<job_conf>
+    <plugins workers="4">
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+    </plugins>
+    <destinations>
+        <destination id="local" runner="local"/>
+    </destinations>
+    <tools>
+    </tools>
+</job_conf>
+```
+{% endraw %}
+
+The above `job_conf.xml` file defines a *plugin* and *destination* to allow Galaxy to run user jobs on the local computer (i.e. The computer that Galaxy is running on.)
+
+Firstly, the plugins section contains a plugin called "local" which is of type "runner" and then loads the python code module for supporting local jobs. Next the destinations section contains a destination called "local" using the runner "local". As this is the only destination specified, it is also the default. So now everytime a user clicks "Execute" on a tool form, Galaxy will run the corresponding job locally using the python code specified.
+
+> ### {% icon tip %} Want to use something else?
+> There are a lot of other plugins available for Galaxy for using other resources such as docker containers, kubernetes hosts, Pulsar destinations and HPC clusters to name a few. See the Galaxy documentation on [job configuration](https://docs.galaxyproject.org/en/master/admin/jobs.html) for more details on these plugins and their configuration. There is also an advanced sample job conf file located at: `/srv/galaxy/server/lib/galaxy/config/sample/job_conf.xml.sample_advanced`
+{: .tip}
+
+> ### {% icon hands_on %} Hands-on: Job Conf
+>
+> 1. If the folder does not exist, create `templates/galaxy/config` next to your `galaxy.yml` playbook (`mkdir -p templates/galaxy/config/`).
+>
+> 2. Create `templates/galaxy/config/job_conf.xml.j2` with the following contents (note that we have changed the names of the plugin and destination from the basic sample file to provide a bit more clarity):
+>
+>    ```xml
+>    <job_conf>
+>        <plugins workers="4">
+>            <plugin id="local_plugin" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+>        </plugins>
+>        <destinations default="local_destination">
+>            <destination id="local_destination" runner="local_plugin"/>
+>        </destinations>
+>        <tools>
+>        </tools>
+>    </job_conf>
+>    ```
+>
+> 3. Inform `galaxyproject.galaxy` of where you would like the `job_conf.xml` to reside, by setting it in your `group_vars/galaxyservers.yml`:
+>
+>    {% raw %}
+>    ```yaml
+>    galaxy_config:
+>      galaxy:
+>        # ... existing configuration options in the `galaxy` section ...
+>        job_config_file: "{{ galaxy_config_dir }}/job_conf.xml"
+>    ```
+>    {% endraw %}
+>
+>    And then deploy the new config file using the `galaxy_config_templates` var in your group vars:
+>
+>    {% raw %}
+>    ```yaml
+>    galaxy_config_templates:
+>      # ... possible existing config file definitions
+>      - src: templates/galaxy/config/job_conf.xml.j2
+>        dest: "{{ galaxy_config.galaxy.job_config_file }}"
+>    ```
+>    {% endraw %}
+>
+> 4. Run the playbook: `ansible-playbook galaxy.yml`. At the very end, you should see output like the following indicating that Galaxy has been restarted:
+>
+>    ```
+>    RUNNING HANDLER [restart galaxy] ****************************************
+>    changed: [galaxy.example.org]
+>    ```
+>
+> 5. Checkout the new job_conf.xml file.
+>
+>    > ### {% icon code-in %} Input: Bash
+>    > ```bash
+>    > cat /srv/galaxy/config/job_conf.xml
+>    > ```
+>    {: .code-in}
+>
+>    > ### {% icon code-out %} Output: Bash
+>    > ```xml
+>    > <job_conf>
+>    >     <plugins workers="4">
+>    >         <plugin id="local_plugin" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner"/>
+>    >     </plugins>
+>    >     <destinations default="local_destination">
+>    >         <destination id="local_destination" runner="local_plugin"/>
+>    >     </destinations>
+>    >     <tools>
+>    >     </tools>
+>    > </job_conf>
+>    > ```
+>    {: .code-out}
+>
+{: .hands_on}
 
 ## Disaster Strikes! (Optional)
 
