@@ -70,59 +70,93 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Language Selector">
-                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Language
-                        </a>
-                        <div class="dropdown-menu">
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                Français
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                日本語
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                Español
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                Português
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                العربية
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
-                                And more!
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
     </a>
     <div class="dropdown-menu dropdown-menu-right">
+        <!-- disable Tess for now
         <form method="get" action="https://tess.elixir-europe.org/materials">
             <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
             <input type="hidden" value="Galaxy Training" name="content_provider">
             <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
         </form>
+        -->
 
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQ">
-            FAQ
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
+        
+        <a class="dropdown-item" href="/training-material/topics/visualisation/faqs/" title="Check our FAQs for the Visualisation topic">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
+        </a>
+        
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
-            Discuss on Galaxy Help
+            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
+           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
+        </a>
+    </div>
+</li>
+
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
+        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+
+        
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/visualisation/tutorials/circos/tutorial.md" title="Edit on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+        </a>
+
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this rrepository">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
+        </a>
+
+        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/visualisation/tutorials/circos/tutorial.html" title="Show view statistics of this page">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
         <div class="dropdown-item">
             <div>
-                Theme
+                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
+            </div>
+
+            <div id="lang-selector">
+                
+                <strong>Automatic Translations</strong>
+
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/visualisation/tutorials/circos/tutorial.html&edit-text=&act=url">
+                Français
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/visualisation/tutorials/circos/tutorial.html&edit-text=&act=url">
+                日本語
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/visualisation/tutorials/circos/tutorial.html&edit-text=&act=url">
+                Español
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/visualisation/tutorials/circos/tutorial.html&edit-text=&act=url">
+                Português
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/visualisation/tutorials/circos/tutorial.html&edit-text=&act=url">
+                العربية
+                </a>
+                
+                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fvisualisation%2Ftutorials%2Fcircos%2Ftutorial.html&edit-text=&act=url" title="">
+                And more!
+                </a>
+            </div>
+        </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
             </div>
 
             <div id="theme-selector" data-toggle="buttons">
@@ -150,12 +184,27 @@
     </div>
 </li>
 
-
+                    <!--
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/visualisation/tutorials/circos/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/visualisation/tutorials/circos/tutorial.md">
                             <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
+                    -->
+
+                     <!-- Search bar-->
+                    <li class="nav-item">
+                      <div id="navbarSupportedContent">
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
+                          <div class="md-form mb-2">
+                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
+                          </div>
+                        </form>
+                      </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -211,7 +260,7 @@
   },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -267,6 +316,10 @@
     {
       "@type": "Person",
       "name": "Helena Rasche"
+    },
+    {
+      "@type": "Person",
+      "name": "Cristóbal Gallardo"
     }
   ],
   "contributor": [
@@ -277,6 +330,10 @@
     {
       "@type": "Person",
       "name": "Helena Rasche"
+    },
+    {
+      "@type": "Person",
+      "name": "Cristóbal Gallardo"
     }
   ],
   "about": [
@@ -296,7 +353,7 @@
 
         <div class="contributors-line">By: 
 
- <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+ <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a> <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a> <a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/gallardoalba" alt="Cristóbal Gallardo">Cristóbal Gallardo</a>
 
 </div>
 
@@ -362,7 +419,7 @@
 
                 
                     <li class="btn btn-default supporting_material">
-<a class="topic-icon" href="https://zenodo.org/record/3603221">
+<a class="topic-icon" href="https://zenodo.org/record/4494146">
     <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span> Datasets
 </a>
 
@@ -381,6 +438,10 @@
                 
 
                 
+                
+                
+
+                
                     <li class="btn btn-default supporting_material">
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
@@ -388,10 +449,6 @@
     </a>
     <ul class="dropdown-menu">
     
-    
-        
-    
-        
     
         
     
@@ -432,6 +489,10 @@
         
     
         
+    
+        
+    
+        
         <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
             Galaxy Africa
         </a>
@@ -452,8 +513,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
@@ -463,10 +522,6 @@
     
         
     
-        
-        <a class="dropdown-item" href="https://www.galaxytrakr.org/" title="GalaxyTrakr">
-            GalaxyTrakr
-        </a>
         
     
         
@@ -528,6 +583,12 @@
         
     
         
+        <a class="dropdown-item" href="https://plants.usegalaxy.eu/" title="Plant Anaylsis Workbench">
+            Plant Anaylsis Workbench
+        </a>
+        
+    
+        
     
         
     
@@ -585,6 +646,8 @@
     
         
     
+        
+    
     </ul>
 
 
@@ -594,7 +657,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Nov 26, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 12, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -880,18 +943,8 @@ of tutorials available from the <a href="http://circos.ca">Circos website</a></p
     <li>
       <p>Make sure you have an empty analysis history. Give it a name.</p>
 
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a new history</h3>
-
-        <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel</p>
-
-        <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>
-        <ol>
-          <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>
-          <li>Select the option <strong>Create New</strong> from the menu</li>
-        </ol>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panelIf the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>    <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>    <li>Select the option <strong>Create New</strong> from the menu</li>  </ol></blockquote>
     </li>
     <li>
       <p><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import Data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span></p>
@@ -899,55 +952,17 @@ of tutorials available from the <a href="http://circos.ca">Circos website</a></p
         <li>Import the sample data files to your history, either from a shared data library (if available), or from Zenodo using the following URLs:</li>
       </ul>
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/3603221/files/VCaP_Copy-Number.tsv
-https://zenodo.org/record/3603221/files/VCaP_B-allele-Frequency.tsv
-https://zenodo.org/record/3603221/files/VCaP-highConfidenceJunctions.tsv
-https://zenodo.org/record/3603221/files/hg18_karyotype_bands.tsv
-https://zenodo.org/record/3603221/files/hg18_karyotype.txt
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4494146/files/VCaP_Copy-Number.tsv
+https://zenodo.org/record/4494146/files/VCaP_B-allele-Frequency.tsv
+https://zenodo.org/record/4494146/files/VCaP-highConfidenceJunctions.tsv
+https://zenodo.org/record/4494146/files/hg18_karyotype_withbands.txt
 </code></pre></div>      </div>
 
-      <blockquote class="tip">
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>    <li>Copy the link location</li>    <li>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</li>    <li>Select <strong>Paste/Fetch Data</strong></li>    <li>Paste the link into the text field</li>    <li>Press <strong>Start</strong></li>    <li><strong>Close</strong> the windowBy default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li>  </ul></blockquote>
 
-        <h3 id="tip-tip-importing-data-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</p>
-
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>    <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>    <li>Find the correct folder (ask your instructor)</li>    <li>Select the desired files</li>    <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>    <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>    <li>Click on <strong>Import</strong></li>  </ul></blockquote>
     </li>
   </ol>
 
@@ -961,18 +976,19 @@ https://zenodo.org/record/3603221/files/hg18_karyotype.txt
   <h3 id="hands_on-hands-on-set-ideogram-configuration"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Set ideogram configuration</h3>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7"><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+<span class="notranslate">galaxy</span>7</span></span>  visualizes data in a ciruclar layout with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7"><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+<span class="notranslate">galaxy</span>7</span></span>  visualizes data in a circular layout with the following parameters:
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
-            <li><em>“Reference Genome”</em>: <code class="language-plaintext highlighter-rouge">Karyotype</code>
+            <li><em>“Reference Genome Source”</em>: <code class="language-plaintext highlighter-rouge">Custom Karyotype</code>
               <ul>
-                <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Karyotype Configuration”</em>: <code class="language-plaintext highlighter-rouge">hg18_karyotype.tsv</code></li>
+                <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Karyotype Configuration”</em>: <code class="language-plaintext highlighter-rouge">hg18_karyotype_withbands.txt</code></li>
               </ul>
             </li>
           </ul>
         </li>
         <li>In <em>“Ideogram”</em>:
+    - <em>“Spacing Spacing Between Ideograms (in chromosome units)”</em>: <code class="language-plaintext highlighter-rouge">50</code>
           <ul>
             <li><em>“Radius”</em>: <code class="language-plaintext highlighter-rouge">0.85</code></li>
             <li><em>“Thickness”</em>: <code class="language-plaintext highlighter-rouge">45</code></li>
@@ -983,9 +999,7 @@ https://zenodo.org/record/3603221/files/hg18_karyotype.txt
             </li>
             <li>In <em>“Cytogenic Bands”</em>:
               <ul>
-                <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Cytogenic Bands”</em>: <code class="language-plaintext highlighter-rouge">hg18_karyotype_bands.tsv</code></li>
-                <li><em>“Convert bands from <span class="notranslate">BED</span> format to circos karyotype band format”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
-                <li><em>“Fill Bands”</em>: <code class="language-plaintext highlighter-rouge">2</code></li>
+                <li><em>“Bands transparency”</em>: <code class="language-plaintext highlighter-rouge">2</code></li>
                 <li><em>“Band Stroke Thickness”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
               </ul>
             </li>
@@ -996,15 +1010,8 @@ https://zenodo.org/record/3603221/files/hg18_karyotype.txt
     <li>
       <p><strong>Rename</strong> <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> the output <code class="language-plaintext highlighter-rouge">Circos Plot ideogram</code></p>
 
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Renaming a dataset</h3>
-        <ul>
-          <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, change the <strong>Name</strong> field</li>
-          <li>Click the <strong>Save</strong> button</li>
-        </ul>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, change the <strong>Name</strong> field  to <code class="language-plaintext highlighter-rouge">Circos Plot ideogram</code></li>    <li>Click the <strong>Save</strong> button</li>  </ul></blockquote>
     </li>
   </ol>
 
@@ -1136,6 +1143,11 @@ The full definition of <code class="language-plaintext highlighter-rouge">hg18</
   <li>Select the columns containing the chromosomes and positions of the breaks (junctions)</li>
 </ul>
 
+<blockquote class="warning">
+  <h3 id="warning-beware-of-cuts"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i><span class="visually-hidden">warning</span> Beware of <strong>Cut</strong>s</h3>
+  <p>The Hands-on section below uses <strong>Cut</strong> tool. There are two <strong>cut</strong> tools in <span class="notranslate">Galaxy</span> due to historical reasons. This example uses tool with the full name <strong>Cut columns from a table</strong> (without <code class="language-plaintext highlighter-rouge">(cut)</code>). The difference is that this version allows cutting columns in any order and with repetitions.</p>
+</blockquote>
+
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-prepare-input-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prepare input data</h3>
 
@@ -1147,7 +1159,7 @@ The full definition of <code class="language-plaintext highlighter-rouge">hg18</
         <li><em>“the pattern”</em>: <code class="language-plaintext highlighter-rouge">^[#&gt;&lt;]</code></li>
       </ul>
     </li>
-    <li><strong>Cut</strong> columns from a table <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="Cut1" title="Tested with Cut1"><strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Cut1</span></span>  columns from a table with the following parameters:
       <ul>
         <li><em>“Cut columns”</em>: <code class="language-plaintext highlighter-rouge">c2,c3,c3,c6,c7,c7</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“From”</em>: output of <strong>Select</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
@@ -1201,8 +1213,8 @@ The full definition of <code class="language-plaintext highlighter-rouge">hg18</
                                   <ul>
                                     <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Actions to Apply”</em>
                                       <ul>
-                                        <li><em>“Action”</em>: <code class="language-plaintext highlighter-rouge">Change Link Colour</code></li>
-                                        <li><em>“Link Color”</em>: <span style="background-color:#ff0000;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (red)</li>
+                                        <li><em>“Action”</em>: <code class="language-plaintext highlighter-rouge">Change Fill Colour</code></li>
+                                        <li><em>“Change fill Color”</em>: <span style="background-color:#ff0000;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (red)</li>
                                       </ul>
                                     </li>
                                   </ul>
@@ -1266,6 +1278,7 @@ at a glance that there are more intrachromosomal SVs (black) than interchromosom
         <li>In <em>“Ideogram”</em>:
           <ul>
             <li><em>“Limit/Filter Chromosomes”</em>: <code class="language-plaintext highlighter-rouge">chr5</code></li>
+            <li><em>“Spacing Between Ideograms (in chromosome units)”</em>: <code class="language-plaintext highlighter-rouge">0.5</code></li>
           </ul>
         </li>
       </ul>
@@ -1432,7 +1445,7 @@ chr1	72017	72017	-0.1353417	0
                     <li>In <em>“Plot Format Specific Options”</em>:
                       <ul>
                         <li><em>“Glyph Size”</em>: <code class="language-plaintext highlighter-rouge">4</code></li>
-                        <li><em>“Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
+                        <li><em>“Fill Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
                         <li><em>“Stroke Thickness”</em>: <code class="language-plaintext highlighter-rouge">0</code></li>
                       </ul>
                     </li>
@@ -1522,7 +1535,7 @@ all at once, rather, you build it up step by step and frequently check the outpu
                   <ul>
                     <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Conditions to Apply”</em>
                       <ul>
-                        <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Apply based on point value</code>
+                        <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Based on value (ONLY for scatter/histogram/heatmap/line)</code>
                           <ul>
                             <li><em>“Points above this value”</em>: <code class="language-plaintext highlighter-rouge">0.15</code></li>
                           </ul>
@@ -1552,7 +1565,7 @@ all at once, rather, you build it up step by step and frequently check the outpu
                   <ul>
                     <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Conditions to Apply”</em>
                       <ul>
-                        <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Apply based on point value</code>
+                        <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Based on value (ONLY for scatter/histogram/heatmap/line)</code>
                           <ul>
                             <li><em>“Points below this value”</em>: <code class="language-plaintext highlighter-rouge">-0.15</code></li>
                           </ul>
@@ -1584,6 +1597,10 @@ all at once, rather, you build it up step by step and frequently check the outpu
 
 </blockquote>
 
+<p>You should now see a plot like this:</p>
+
+<p><img src="../../images/circos/cancer-cnv-full.png" alt="Circos plot with SNV track with rules defined" width="75%" /></p>
+
 <p>Sometimes it can also be nice to see the axes of the plot, to more accurately judge the values of the different data points.
 We can do this as follows:</p>
 
@@ -1602,10 +1619,10 @@ We can do this as follows:</p>
               <ul>
                 <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Axis”</em>
                   <ul>
-                    <li><em>“Inside Radius”</em>: <code class="language-plaintext highlighter-rouge">-1</code></li>
-                    <li><em>“Outside Radius”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
-                    <li><em>“Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
                     <li><em>“Spacing”</em>: <code class="language-plaintext highlighter-rouge">0.25</code></li>
+                    <li><em>“Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
+                    <li><em>“y0”</em>: -1</li>
+                    <li><em>“y1”</em>: 1</li>
                   </ul>
                 </li>
               </ul>
@@ -1619,9 +1636,9 @@ We can do this as follows:</p>
 
 </blockquote>
 
-<p>You should now see a plot like this:</p>
+<p>You should now see a plot with axes:</p>
 
-<p><img src="../../images/circos/cancer-cnv-full.png" alt="Circos plot with SNV track with rules and axes defined" width="75%" /></p>
+<p><img src="../../images/circos/cancer-cnv-full-axes.png" alt="Circos plot with SNV track with rules and axes defined" width="75%" /></p>
 
 <!-- TODO: update image when axes are fixed (should be able to go to -1) -->
 
@@ -1677,13 +1694,13 @@ chr1	110905	110905	0.9918569
     <li><span class="tool" data-tool="Remove+beginning1" title="Tested with Remove+beginning1"><strong>Remove beginning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Remove+beginning1</span></span>  with the following parameters:
       <ul>
         <li><em>“Remove first”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: <code class="language-plaintext highlighter-rouge">B-allele frequence.tsv</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: <code class="language-plaintext highlighter-rouge">VCaP_B-allele frequence.tsv</code></li>
       </ul>
     </li>
     <li><span class="tool" data-tool="random_lines1" title="Tested with random_lines1"><strong>Select random lines</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: random_lines1</span></span>  with the following parameters:
       <ul>
         <li><em>“Randomly select”</em>: <code class="language-plaintext highlighter-rouge">25000</code></li>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: output of <strong>Select</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: output of <strong>Remove</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
         <li><em>“Set a random seed”</em>: <code class="language-plaintext highlighter-rouge">Don't set seed</code></li>
       </ul>
     </li>
@@ -1715,7 +1732,7 @@ chr1	110905	110905	0.9918569
                     <li>In <em>“Plot Format Specific Options”</em>:
                       <ul>
                         <li><em>“Glyph Size”</em>: <code class="language-plaintext highlighter-rouge">4</code></li>
-                        <li><em>“Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
+                        <li><em>“Fill Color”</em>: <span style="background-color:#7f7f7f;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (gray)</li>
                         <li><em>“Stroke Thickness”</em>: <code class="language-plaintext highlighter-rouge">0</code></li>
                       </ul>
                     </li>
@@ -1808,7 +1825,7 @@ There is a parameter of the link track type called <em>Bezier</em>, which contro
 
   <ol>
     <li>
-      <p>Hit <strong>Rerun</strong> <i class="fas fa-sync-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-refresh</span> on the previous Circos <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> run (<code class="language-plaintext highlighter-rouge">Circos Plot CopyNumber</code>)</p>
+      <p>Hit <strong>Rerun</strong> <i class="fas fa-sync-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-refresh</span> on the previous Circos <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> run (<code class="language-plaintext highlighter-rouge">Circos Plot BAF</code>)</p>
     </li>
     <li>
       <p>Change the Bezier parameter of the SV track:</p>
@@ -2005,18 +2022,8 @@ There is a parameter of the link track type called <em>Bezier</em>, which contro
     <li>
       <p>Make sure you have an empty analysis history. Give it a name.</p>
 
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-creating-a-new-history-1"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a new history</h3>
-
-        <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel</p>
-
-        <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>
-        <ol>
-          <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>
-          <li>Select the option <strong>Create New</strong> from the menu</li>
-        </ol>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panelIf the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>    <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>    <li>Select the option <strong>Create New</strong> from the menu</li>  </ol></blockquote>
     </li>
     <li>
       <p><strong>Import Data.</strong></p>
@@ -2024,53 +2031,16 @@ There is a parameter of the link track type called <em>Bezier</em>, which contro
         <li>Import the sample data files to your history, either from a shared data library (if available), or from Zenodo using the following URLs:</li>
       </ul>
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/3603221/files/debate_karyotype.txt
-https://zenodo.org/record/3603221/files/debate_links.tab
-https://zenodo.org/record/3603221/files/debate_slices.tab
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4494146/files/debate_karyotype.txt
+https://zenodo.org/record/4494146/files/debate_links.tab
+https://zenodo.org/record/4494146/files/debate_slices.tab
 </code></pre></div>      </div>
 
-      <blockquote class="tip">
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>    <li>Copy the link location</li>    <li>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</li>    <li>Select <strong>Paste/Fetch Data</strong></li>    <li>Paste the link into the text field</li>    <li>Press <strong>Start</strong></li>    <li><strong>Close</strong> the windowBy default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li>  </ul></blockquote>
 
-        <h3 id="tip-tip-importing-data-via-links-1"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</p>
-
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library-1"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>    <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>    <li>Find the correct folder (ask your instructor)</li>    <li>Select the desired files</li>    <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>    <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>    <li>Click on <strong>Import</strong></li>  </ul></blockquote>
     </li>
   </ol>
 
@@ -2103,7 +2073,7 @@ The last column indicates the party of each candidate (democratic or republican)
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
-            <li><em>“Reference Genome”</em>: <code class="language-plaintext highlighter-rouge">Karyotype</code>
+            <li><em>“Reference Genome Source”</em>: <code class="language-plaintext highlighter-rouge">Custom Karyotype</code>
               <ul>
                 <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Karyotype Configuration”</em>: <code class="language-plaintext highlighter-rouge">debate_karyotype.tab</code></li>
               </ul>
@@ -2111,6 +2081,8 @@ The last column indicates the party of each candidate (democratic or republican)
           </ul>
         </li>
         <li>In <em>“Ideogram”</em>:
+    - <em>“Chromosome units”</em>: <code class="language-plaintext highlighter-rouge">bases</code>
+    - <em>“Spacing Between Ideograms (in chromosome units)”</em>: <code class="language-plaintext highlighter-rouge">20</code>
           <ul>
             <li>In <em>“Labels”</em>:
               <ul>
@@ -2124,15 +2096,8 @@ The last column indicates the party of each candidate (democratic or republican)
     <li>
       <p><strong>Rename</strong> <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> the output <code class="language-plaintext highlighter-rouge">Circos Plot karyotype</code></p>
 
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-renaming-a-dataset-1"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Renaming a dataset</h3>
-        <ul>
-          <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, change the <strong>Name</strong> field</li>
-          <li>Click the <strong>Save</strong> button</li>
-        </ul>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, change the <strong>Name</strong> field</li>    <li>Click the <strong>Save</strong> button</li>  </ul></blockquote>
     </li>
   </ol>
 
@@ -2172,36 +2137,41 @@ richardson  251  750    stroke_thickness=5,stroke_color=white
     </li>
     <li>Add highlights to the ideogram:
       <ul>
-        <li>In “Highlights”:
+        <li>In “2D Data Tracks”:
           <ul>
-            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> Insert Highlight:
+            <li>In “2D Data Plots”:
               <ul>
                 <li><em>“Outside Radius”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
                 <li><em>“Inside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.9</code></li>
+                <li><em>“Plot Type”</em>: <code class="language-plaintext highlighter-rouge">Highlight</code></li>
                 <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Highlight Data Source”</em>: <code class="language-plaintext highlighter-rouge">debate_slices.tab</code></li>
-                <li><em>“Fill Color”</em>: <span style="background-color:#d99696;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (light red)</li>
-                <li>In “Rules”:
+                <li>In “Plot Format Specific Options”:
                   <ul>
-                    <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> Insert Rule
+                    <li><em>“Fill Color”</em>: <span style="background-color:#d99696;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (light red)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>In “Rules”:
+              <ul>
+                <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> Insert Rule
+                  <ul>
+                    <li>In <em>“Conditions to Apply”</em>:
                       <ul>
-                        <li>In <em>“Conditions to Apply”</em>:
+                        <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Conditions to Apply”</em>
                           <ul>
-                            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Conditions to Apply”</em>
-                              <ul>
-                                <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Check for presence/absence per chromosome</code></li>
-                                <li><em>“Contig IDs”</em>: <code class="language-plaintext highlighter-rouge">obama|richardson|clinton</code></li>
-                              </ul>
-                            </li>
+                            <li><em>“Condition”</em>: <code class="language-plaintext highlighter-rouge">Check for presence/absence per chromosome</code></li>
+                            <li><em>“Contig IDs”</em>: <code class="language-plaintext highlighter-rouge">obama|richardson|clinton</code></li>
                           </ul>
                         </li>
-                        <li>In <em>“Actions to Apply”</em>:
+                      </ul>
+                    </li>
+                    <li>In <em>“Actions to Apply”</em>:
+                      <ul>
+                        <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Actions to Apply”</em>
                           <ul>
-                            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Actions to Apply”</em>
-                              <ul>
-                                <li><em>“Action”</em>: <code class="language-plaintext highlighter-rouge">Change Fill Color for all points</code></li>
-                                <li><em>“Fill Color”</em>: <span style="background-color:#548dd4;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (light blue)</li>
-                              </ul>
-                            </li>
+                            <li><em>“Action”</em>: <code class="language-plaintext highlighter-rouge">Change Fill Color for all points</code></li>
+                            <li><em>“Fill Color”</em>: <span style="background-color:#548dd4;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span> (light blue)</li>
                           </ul>
                         </li>
                       </ul>
@@ -2369,48 +2339,20 @@ huckabee	525	525	clinton	750	750
   <ol>
     <li>Create a new history for this tutorial</li>
     <li>
-      <p>Import the files from <a href="">Zenodo</a> or from the shared data library</p>
+      <p>Import the files from Zenodo or from the shared data library</p>
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/3603221/files/chrom.tab
-https://zenodo.org/record/3603221/files/highlights.tab
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4494146/files/chrom.tab
+https://zenodo.org/record/4494146/files/highlights.tab
 </code></pre></div>      </div>
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-via-links-2"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</p>
-
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>    <li>Copy the link location</li>    <li>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</li>    <li>Select <strong>Paste/Fetch Data</strong></li>    <li>Paste the link into the text field</li>    <li>Press <strong>Start</strong></li>    <li><strong>Close</strong> the windowBy default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li>  </ul></blockquote>
     </li>
     <li>Rename the datasets</li>
     <li>
       <p>Check that the datatype is <code class="language-plaintext highlighter-rouge">tabular</code> for both files</p>
 
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the datatype</h3>
-        <ul>
-          <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>
-          <li>Select <code class="language-plaintext highlighter-rouge">tabular</code></li>
-          <li>Click the <strong>Change datatype</strong> button</li>
-        </ul>
-      </blockquote>
+      <!--SNIPPET-->
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>    <li>Select <code class="language-plaintext highlighter-rouge">tabular</code></li>    <li>Click the <strong>Change datatype</strong> button</li>  </ul></blockquote>
     </li>
   </ol>
 
@@ -2433,18 +2375,9 @@ https://zenodo.org/record/3603221/files/highlights.tab
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
-            <li><em>“Reference Genome”</em>: <code class="language-plaintext highlighter-rouge">Karyotype</code>
+            <li><em>“Reference Genome Source”</em>: <code class="language-plaintext highlighter-rouge">Custom Karyotype</code>
               <ul>
                 <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Karyotype Configuration”</em>: <code class="language-plaintext highlighter-rouge">chrom.tab</code></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>In <em>“General”</em>:
-          <ul>
-            <li><em>“Plot Background”</em>: <code class="language-plaintext highlighter-rouge">Solid Color</code>
-              <ul>
-                <li><em>“Background Color”</em>: <span style="background-color:#000000;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span></li>
               </ul>
             </li>
           </ul>
@@ -2459,23 +2392,34 @@ https://zenodo.org/record/3603221/files/highlights.tab
             </li>
           </ul>
         </li>
-        <li>In <em>“Highlights”</em>:
+        <li>In <em>“General”</em>:
           <ul>
-            <li>In <em>“Highlight”</em>:
+            <li><em>“Plot Background”</em>: <code class="language-plaintext highlighter-rouge">Solid Color</code>
               <ul>
-                <li>Click on <em>“Insert Highlight”</em>:</li>
-                <li>In <em>“1: Highlight”</em>:
+                <li><em>“Background Color”</em>: <span style="background-color:#000000;border-radius:3px;border:1px solid #000;width:12px;height:12px;margin-right:5px;">     </span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>In <em>“2D Tracks”</em>:
+          <ul>
+            <li>In <em>“2D Data Plot”</em>:
+              <ul>
+                <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert 2D Data Plot”</em></li>
+                <li>In *“1: 2D Data Plot
                   <ul>
                     <li><em>“Outside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.99</code></li>
                     <li><em>“Inside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.9</code></li>
+                    <li><em>“Plot Type”</em>: <code class="language-plaintext highlighter-rouge">Highlight</code></li>
                     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Highlight Data Source”</em>: <code class="language-plaintext highlighter-rouge">highlights.tab</code></li>
                   </ul>
                 </li>
-                <li>Click on <em>“Insert Highlight”</em>:</li>
-                <li>In <em>“2: Highlight”</em>:
+                <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert 2D Data Plot”</em></li>
+                <li>In *“2: 2D Data Plot
                   <ul>
                     <li><em>“Outside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.89</code></li>
                     <li><em>“Inside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.8</code></li>
+                    <li><em>“Plot Type”</em>: <code class="language-plaintext highlighter-rouge">Highlight</code></li>
                     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Highlight Data Source”</em>: <code class="language-plaintext highlighter-rouge">highlights.tab</code></li>
                     <li>In <em>“Rules”</em>:
                       <ul>
@@ -2555,11 +2499,12 @@ https://zenodo.org/record/3603221/files/highlights.tab
                     </li>
                   </ul>
                 </li>
-                <li>Click on <em>“Insert Highlight”</em>:</li>
-                <li>In <em>“3: Highlight”</em>:
+                <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert 2D Data Plot”</em></li>
+                <li>In *“3: 2D Data Plot
                   <ul>
                     <li><em>“Outside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.79</code></li>
                     <li><em>“Inside Radius”</em>: <code class="language-plaintext highlighter-rouge">0.7</code></li>
+                    <li><em>“Plot Type”</em>: <code class="language-plaintext highlighter-rouge">Highlight</code></li>
                     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Highlight Data Source”</em>: <code class="language-plaintext highlighter-rouge">highlights.tab</code></li>
                     <li>In <em>“Rules”</em>:
                       <ul>
@@ -2751,6 +2696,11 @@ https://zenodo.org/record/3603221/files/highlights.tab
                     </blockquote>
                     
 
+                    <h1>Frequently Asked Questions</h1>
+                    Have questions about this tutorial? Check out the  <a href="/training-material/topics/visualisation/faqs/">FAQ page for the Visualisation topic</a> to see if your question is listed there.
+                    If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
+                    <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+
                     
 
                     
@@ -2811,7 +2761,7 @@ https://zenodo.org/record/3603221/files/highlights.tab
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Saskia Hiltemann, Helena Rasche, 2020 <b>Visualisation with Circos (Galaxy Training Materials)</b>. <a href="/training-material/topics/visualisation/tutorials/circos/tutorial.html">/training-material/topics/visualisation/tutorials/circos/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Saskia Hiltemann, Helena Rasche, Cristóbal Gallardo, 2021 <b>Visualisation with Circos (Galaxy Training Materials)</b>. <a href="/training-material/topics/visualisation/tutorials/circos/tutorial.html">/training-material/topics/visualisation/tutorials/circos/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -2826,11 +2776,11 @@ https://zenodo.org/record/3603221/files/highlights.tab
 
                     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
 <code id="citation-code">@misc{visualisation-circos,
-    author = "Saskia Hiltemann and Helena Rasche",
+    author = "Saskia Hiltemann and Helena Rasche and Cristóbal Gallardo",
     title = "Visualisation with Circos (Galaxy Training Materials)",
-    year = "2020",
-    month = "11",
-    day = "26"
+    year = "2021",
+    month = "03",
+    day = "12"
     url = "\url{/training-material/topics/visualisation/tutorials/circos/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2877,11 +2827,11 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         <p>
             This material is the result of a collaborative work. Thanks to the
             <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> (Saskia Hiltemann, Helena Rasche)!
+            and all the <a href="/training-material/hall-of-fame">contributors</a> (Saskia Hiltemann, Helena Rasche, Cristóbal Gallardo)!
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/visualisation/tutorials/circos/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/main/topics/visualisation/tutorials/circos/tutorial.md">GitHub</a>.
         </p>
         <p>
     The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

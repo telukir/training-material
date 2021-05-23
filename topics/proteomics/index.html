@@ -46,33 +46,95 @@
                             <i class="fas fa-users" aria-hidden="true"></i><span class="visually-hidden">hall-of-fame</span> Contributors
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/galaxyproject/training-material" title="View on GitHub">
-                            <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
-                        </a>
-                    </li>
                     <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
     </a>
     <div class="dropdown-menu dropdown-menu-right">
+        <!-- disable Tess for now
         <form method="get" action="https://tess.elixir-europe.org/materials">
             <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
             <input type="hidden" value="Galaxy Training" name="content_provider">
             <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
         </form>
+        -->
 
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQ">
-            FAQ
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
+        
+        <a class="dropdown-item" href="/training-material/topics/proteomics/faqs/" title="Check our FAQs for the  topic">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
+        </a>
+
+        
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
-            Discuss on Galaxy Help
+            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
+           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
+        </a>
+    </div>
+</li>
+
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
+        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+
+        
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/proteomics/" title="Edit on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+        </a>
+
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this rrepository">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
+        </a>
+
+        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/proteomics/" title="Show view statistics of this page">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
         <div class="dropdown-item">
             <div>
-                Theme
+                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
+            </div>
+
+            <div id="lang-selector">
+                
+                <strong>Automatic Translations</strong>
+
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/&edit-text=&act=url">
+                Français
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/&edit-text=&act=url">
+                日本語
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/&edit-text=&act=url">
+                Español
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/&edit-text=&act=url">
+                Português
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/proteomics/&edit-text=&act=url">
+                العربية
+                </a>
+                
+                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2F%2Ftutorials%2F%2Ftutorial.html&edit-text=&act=url" title="">
+                And more!
+                </a>
+            </div>
+        </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
             </div>
 
             <div id="theme-selector" data-toggle="buttons">
@@ -198,6 +260,81 @@
       
         <tr>
           <td class="tutorial_title">
+          Introduction to proteomics, protein identification, quantification and statistical modelling
+          <div class="">
+          
+          
+          </div>
+          </td>
+          
+            <td>
+            
+              <span class="btn-group">
+                <a class="btn btn-default topic-icon" href="/training-material/topics/proteomics/slides/introduction.html">
+                    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+                </a>
+                <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=en&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      English
+                    </a>
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      Français
+                    </a>
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      日本語
+                    </a>
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      Español
+                    </a>
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      Português
+                    </a>
+                  
+                    <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      العربية
+                    </a>
+                  
+                  <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Fslides%2Fintroduction.html&edit-text=&act=url" title="">
+                      And more!
+                  </a>
+                </ul>
+                
+                /
+                <a class="topic-icon" href="/training-material/videos/watch.html?v=proteomics/slides/introduction">
+                    <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+                </a>
+                
+              </span>
+            
+            </td>
+            <td></td>
+            
+              <td></td>
+              <td></td>
+              <td></td>
+            
+            
+              <td></td>
+            
+          
+         </tr>
+         
+       
+    
+    
+
+    
+      
+        <tr>
+          <td class="tutorial_title">
           Annotating a protein list identified by LC-MS/MS experiments
           <div class="">
           
@@ -206,6 +343,8 @@
           </td>
           
             <td> 
+
+    </span>
 
  </td>
             <td> 
@@ -217,6 +356,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fproteome_annotation%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -369,8 +510,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="http://www.proteore.org/" title="ProteoRE">
             ProteoRE
         </a>
@@ -385,11 +524,19 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
             UseGalaxy.fr
         </a>
+        
+    
         
     
         
@@ -427,6 +574,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -437,6 +586,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fbiomarker_selection%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -585,8 +736,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="http://www.proteore.org/" title="ProteoRE">
             ProteoRE
         </a>
@@ -601,11 +750,19 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
             UseGalaxy.fr
         </a>
+        
+    
         
     
         
@@ -650,6 +807,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -660,6 +819,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fntails%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -853,6 +1014,8 @@
     
         
     
+        
+    
     </ul>
 
 
@@ -885,6 +1048,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -895,6 +1060,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-label-free%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -999,11 +1166,11 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
+        
+    
         
     
         
@@ -1069,6 +1236,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -1085,11 +1256,17 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -1128,6 +1305,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -1138,6 +1317,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Flabelfree-vs-labelled%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -1207,6 +1388,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -1217,6 +1400,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fml-modeling-of-anti-cancer-peptides%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -1264,6 +1449,144 @@
             
               <td> 
 
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+    </a>
+    <ul class="dropdown-menu">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    </ul>
+
 
  </td>
             
@@ -1294,6 +1617,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -1304,6 +1629,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmass-spectrometry-imaging-loading-exploring-data%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -1408,11 +1735,11 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
+        
+    
         
     
         
@@ -1478,6 +1805,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -1499,6 +1830,261 @@
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
+        
+    
+        
+    
+        
+    
+    </ul>
+
+
+ </td>
+            
+          
+         </tr>
+         
+       
+    
+    
+
+    
+      
+        <tr>
+          <td class="tutorial_title">
+          MaxQuant and MSstats for the analysis of label-free data
+          <div class="">
+          
+            
+<span class="level intermediate" title="Intermediate Tutorial">
+  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>
+</span>
+
+
+          
+          
+          </div>
+          </td>
+          
+            <td> 
+
+    </span>
+
+ </td>
+            <td> 
+    <span class="btn-group">
+        <a href="/training-material/topics/proteomics/tutorials/maxquant-msstats-dda-lfq/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+        
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmaxquant-msstats-dda-lfq%2Ftutorial.html&edit-text=&act=url" title="">
+            And more!
+        </a>
+    </span>
+
+ </td>
+
+            
+              <td> 
+ </td>
+              <td> 
+    <a class="topic-icon" href="/training-material/topics/proteomics/tutorials/maxquant-msstats-dda-lfq/workflows/" title="Workflows" alt="MaxQuant and MSstats for the analysis of label-free data workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span>
+    </a>
+
+ </td>
+              <td> 
+ </td>
+            
+            
+              <td> 
+
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+    </a>
+    <ul class="dropdown-menu">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
+            Galaxy@GenOuest
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
+            Street Science
+        </a>
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
+            UseGalaxy.eu
+        </a>
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.no/" title="UseGalaxy.no">
+            UseGalaxy.no
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
+        
+    
         
     
         
@@ -1530,6 +2116,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -1540,6 +2128,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmetaproteomics%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -1582,7 +2172,7 @@
 
  </td>
               <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/metaproteomics/tours/">
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/metaproteomics/tours/">
     <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
 </a>
 
@@ -1714,6 +2304,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -1729,6 +2323,16 @@
         </a>
         
     
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
         
     
         
@@ -1769,6 +2373,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -1779,6 +2385,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmetaquantome-data-creation%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -1949,6 +2557,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -1962,6 +2574,8 @@
         <a class="dropdown-item" href="https://usegalaxy.no/" title="UseGalaxy.no">
             UseGalaxy.no
         </a>
+        
+    
         
     
         
@@ -2004,6 +2618,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -2014,6 +2630,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmetaquantome-function%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -2118,8 +2736,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
@@ -2184,6 +2800,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -2191,6 +2809,10 @@
     
         
     
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
         
     
         
@@ -2213,6 +2835,8 @@
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2251,6 +2875,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -2261,6 +2887,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fmetaquantome-taxonomy%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -2365,8 +2993,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
@@ -2431,6 +3057,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -2438,6 +3066,10 @@
     
         
     
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
         
     
         
@@ -2460,6 +3092,8 @@
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2498,6 +3132,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -2508,6 +3144,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fprotein-id-oms%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -2550,7 +3188,7 @@
 
  </td>
               <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/protein-id-oms/tours/">
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/protein-id-oms/tours/">
     <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
 </a>
 
@@ -2709,6 +3347,8 @@
     
         
     
+        
+    
     </ul>
 
 
@@ -2741,6 +3381,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -2751,6 +3393,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fprotein-id-sg-ps%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -2793,7 +3437,7 @@
 
  </td>
               <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/protein-id-sg-ps/tours/">
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/protein-id-sg-ps/tours/">
     <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
 </a>
 
@@ -2925,6 +3569,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -2946,6 +3594,8 @@
         <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
             UseGalaxy.org.au
         </a>
+        
+    
         
     
         
@@ -2984,6 +3634,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -2994,6 +3646,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fprotein-quant-sil%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -3036,7 +3690,7 @@
 
  </td>
               <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/protein-quant-sil/tours/">
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/protein-quant-sil/tours/">
     <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
 </a>
 
@@ -3195,6 +3849,8 @@
     
         
     
+        
+    
     </ul>
 
 
@@ -3227,6 +3883,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -3237,6 +3895,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fpeptide-library-data-analysis%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -3280,6 +3940,144 @@
             
               <td> 
 
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+    </a>
+    <ul class="dropdown-menu">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    </ul>
+
 
  </td>
             
@@ -3310,6 +4108,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -3320,6 +4120,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fdatabase-handling%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -3358,7 +4160,7 @@
 
  </td>
               <td> 
-<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/master/topics/proteomics/tutorials/database-handling/tours/">
+<a class="topic-icon" href="https://github.com/galaxyproject/training-material/tree/main/topics/proteomics/tutorials/database-handling/tours/">
     <i class="fas fa-magic" aria-hidden="true"></i><span class="visually-hidden">interactive_tour</span>
 </a>
 
@@ -3508,6 +4310,12 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
+        
+    
+        
     
         
     
@@ -3545,6 +4353,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -3555,6 +4365,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fproteogenomics-dbcreation%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -3602,6 +4414,168 @@
             
               <td> 
 
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>
+    </a>
+    <ul class="dropdown-menu">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
+            Street Science
+        </a>
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
+            UseGalaxy.eu
+        </a>
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.no/" title="UseGalaxy.no">
+            UseGalaxy.no
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+    </ul>
+
 
  </td>
             
@@ -3632,6 +4606,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -3642,6 +4618,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fproteogenomics-dbsearch%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -3812,6 +4790,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -3827,6 +4809,16 @@
         </a>
         
     
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
         
     
         
@@ -3867,6 +4859,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -3877,6 +4871,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fproteogenomics-novel-peptide-analysis%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -4047,6 +5043,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -4062,6 +5062,16 @@
         </a>
         
     
+        
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
+        </a>
+        
+    
+        
+        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
+            UseGalaxy.org.au
+        </a>
         
     
         
@@ -4102,6 +5112,8 @@
           
             <td> 
 
+    </span>
+
  </td>
             <td> 
     <span class="btn-group">
@@ -4112,6 +5124,8 @@
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
+        
+         <div class="dropdown-item"><strong>Automatic translations</strong></div>
         
             <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fproteomics%2Ftutorials%2Fsecretome-prediction%2Ftutorial.html&edit-text=&act=url" title="">
                 Français
@@ -4216,8 +5230,6 @@
         
     
         
-    
-        
         <a class="dropdown-item" href="https://galaxy.genouest.org" title="Galaxy@GenOuest">
             Galaxy@GenOuest
         </a>
@@ -4280,6 +5292,12 @@
         
     
         
+        <a class="dropdown-item" href="https://plants.usegalaxy.eu/" title="Plant Anaylsis Workbench">
+            Plant Anaylsis Workbench
+        </a>
+        
+    
+        
     
         
     
@@ -4298,6 +5316,10 @@
         
     
         
+        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
+            UseGalaxy.be
+        </a>
+        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -4311,6 +5333,8 @@
         <a class="dropdown-item" href="https://usegalaxy.no/" title="UseGalaxy.no">
             UseGalaxy.no
         </a>
+        
+    
         
     
         
@@ -4354,6 +5378,9 @@
             
         
 
+        <h2 id="topic-faq">Frequently Asked Questions</h2>
+        Common questions regarding this topic have been collected on a <a href="faqs/">dedicated FAQ page </a>. Common questions related to specific tutorials can be accessed from the tutorials themselves.
+
         <h2 id="maintainers">Maintainers</h2>
         <p>This material is maintained by:</p>
         
@@ -4374,7 +5401,7 @@
         
         
 
- <a href="/training-material/hall-of-fame/vloux/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/vloux" alt="Valentin Loux">Valentin Loux</a> <a href="/training-material/hall-of-fame/combesf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/combesf" alt="Florence Combes">Florence Combes</a> <a href="/training-material/hall-of-fame/davidchristiany/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/davidchristiany" alt="David Christiany">David Christiany</a> <a href="/training-material/hall-of-fame/yvandenb/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yvandenb" alt="Yves Vandenbrouck">Yves Vandenbrouck</a> <a href="/training-material/hall-of-fame/stortebecker/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/stortebecker" alt="Florian Christoph Sigloch">Florian Christoph Sigloch</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/foellmelanie/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/foellmelanie" alt="Melanie Föll">Melanie Föll</a> <a href="/training-material/hall-of-fame/matthias313/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/matthias313" alt="Matthias Fahrner">Matthias Fahrner</a> <a href="/training-material/hall-of-fame/jaidevjoshi83/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jaidevjoshi83" alt="Jayadev Joshi">Jayadev Joshi</a> <a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankenberg" alt="Daniel Blankenberg">Daniel Blankenberg</a> <a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/timothygriffin" alt="Timothy J. Griffin">Timothy J. Griffin</a> <a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pratikdjagtap" alt="Pratik Jagtap">Pratik Jagtap</a> <a href="/training-material/hall-of-fame/jj-umn/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jj-umn" alt="James Johnson">James Johnson</a> <a href="/training-material/hall-of-fame/blankclemens/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankclemens" alt="Clemens Blank">Clemens Blank</a> <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/subinamehta" alt="Subina Mehta">Subina Mehta</a> <a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/emmaleith" alt="Emma Leith">Emma Leith</a> <a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mariecrane" alt="Marie Crane">Marie Crane</a> <a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pravs3683" alt="Praveen Kumar">Praveen Kumar</a> <a href="/training-material/hall-of-fame/jraysajulga/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jraysajulga" alt="Ray Sajulga">Ray Sajulga</a>
+ <a href="/training-material/hall-of-fame/foellmelanie/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/foellmelanie" alt="Melanie Föll">Melanie Föll</a> <a href="/training-material/hall-of-fame/vloux/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/vloux" alt="Valentin Loux">Valentin Loux</a> <a href="/training-material/hall-of-fame/combesf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/combesf" alt="Florence Combes">Florence Combes</a> <a href="/training-material/hall-of-fame/davidchristiany/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/davidchristiany" alt="David Christiany">David Christiany</a> <a href="/training-material/hall-of-fame/yvandenb/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yvandenb" alt="Yves Vandenbrouck">Yves Vandenbrouck</a> <a href="/training-material/hall-of-fame/stortebecker/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/stortebecker" alt="Florian Christoph Sigloch">Florian Christoph Sigloch</a> <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a> <a href="/training-material/hall-of-fame/matthias313/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/matthias313" alt="Matthias Fahrner">Matthias Fahrner</a> <a href="/training-material/hall-of-fame/jaidevjoshi83/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jaidevjoshi83" alt="Jayadev Joshi">Jayadev Joshi</a> <a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankenberg" alt="Daniel Blankenberg">Daniel Blankenberg</a> <a href="/training-material/hall-of-fame/timothygriffin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/timothygriffin" alt="Timothy J. Griffin">Timothy J. Griffin</a> <a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pratikdjagtap" alt="Pratik Jagtap">Pratik Jagtap</a> <a href="/training-material/hall-of-fame/jj-umn/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jj-umn" alt="James Johnson">James Johnson</a> <a href="/training-material/hall-of-fame/blankclemens/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankclemens" alt="Clemens Blank">Clemens Blank</a> <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/subinamehta" alt="Subina Mehta">Subina Mehta</a> <a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/emmaleith" alt="Emma Leith">Emma Leith</a> <a href="/training-material/hall-of-fame/mariecrane/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mariecrane" alt="Marie Crane">Marie Crane</a> <a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pravs3683" alt="Praveen Kumar">Praveen Kumar</a> <a href="/training-material/hall-of-fame/jraysajulga/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jraysajulga" alt="Ray Sajulga">Ray Sajulga</a>
 
 
 
@@ -4415,6 +5442,7 @@
 
 <footer>
     <div class="container">
+        <br><br>
         <p>
             The <a href="https://galaxyproject.org/teach/gtn/">Galaxy Training Network</a>
             provides researchers with online training materials, connects them with local trainers, and helps promoting open data analysis practices worldwide.
@@ -4422,7 +5450,7 @@
         <p>
     The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 </p>
-        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/31631c198eea94b499815f2cd229963601588f91">31631c198eea94b499815f2cd229963601588f91</a></p>
+        <p>This is revision <a href="https://github.com/galaxyproject/training-material/commit/f036b0bf3a5c37cd7933efa8e5152e5bd87cd383">f036b0bf3a5c37cd7933efa8e5152e5bd87cd383</a></p>
     </div>
 </footer>
 

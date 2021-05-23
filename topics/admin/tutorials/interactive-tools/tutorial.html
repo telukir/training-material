@@ -70,59 +70,93 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Language Selector">
-                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Language
-                        </a>
-                        <div class="dropdown-menu">
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                Français
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                日本語
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                Español
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                Português
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                العربية
-                            </a>
-                            
-                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
-                                And more!
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
         <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
     </a>
     <div class="dropdown-menu dropdown-menu-right">
+        <!-- disable Tess for now
         <form method="get" action="https://tess.elixir-europe.org/materials">
             <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
             <input type="hidden" value="Galaxy Training" name="content_provider">
             <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
         </form>
+        -->
 
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQ">
-            FAQ
+        <a class="dropdown-item" href="/training-material/faq" title="Check our FAQs">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> FAQs
         </a>
+        
+        <a class="dropdown-item" href="/training-material/topics/admin/faqs/" title="Check our FAQs for the Galaxy Server administration topic">
+           <i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Topic FAQs
+        </a>
+        
         <a class="dropdown-item" href="https://help.galaxyproject.org/" title="Discuss on Galaxy Help">
-            Discuss on Galaxy Help
+            <i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Galaxy Help Forum
+        </a>
+        <a class="dropdown-item" href="https://gitter.im/Galaxy-Training-Network/Lobby" title="Discuss on gitter">
+           <i class="fab fa-gitter" aria-hidden="true"></i><span class="visually-hidden">gitter</span> Discuss on Gitter
+        </a>
+    </div>
+</li>
+
+
+                    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Extras">
+        <i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">galaxy-star</span> Extras
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+
+        
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/interactive-tools/tutorial.md" title="Edit on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
+        </a>
+
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this rrepository">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
+        </a>
+
+        <a class="dropdown-item" href="https://plausible.galaxyproject.eu/training.galaxyproject.org?period=12mo&page=/training-material/topics/admin/tutorials/interactive-tools/tutorial.html" title="Show view statistics of this page">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
         <div class="dropdown-item">
             <div>
-                Theme
+                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
+            </div>
+
+            <div id="lang-selector">
+                
+                <strong>Automatic Translations</strong>
+
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/admin/tutorials/interactive-tools/tutorial.html&edit-text=&act=url">
+                Français
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/admin/tutorials/interactive-tools/tutorial.html&edit-text=&act=url">
+                日本語
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/admin/tutorials/interactive-tools/tutorial.html&edit-text=&act=url">
+                Español
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/admin/tutorials/interactive-tools/tutorial.html&edit-text=&act=url">
+                Português
+                </a>
+                
+<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/admin/tutorials/interactive-tools/tutorial.html&edit-text=&act=url">
+                العربية
+                </a>
+                
+                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Finteractive-tools%2Ftutorial.html&edit-text=&act=url" title="">
+                And more!
+                </a>
+            </div>
+        </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Theme
             </div>
 
             <div id="theme-selector" data-toggle="buttons">
@@ -150,12 +184,27 @@
     </div>
 </li>
 
-
+                    <!--
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/master/topics/admin/tutorials/interactive-tools/tutorial.md">
+                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/admin/tutorials/interactive-tools/tutorial.md">
                             <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
                         </a>
                     </li>
+                    -->
+
+                     <!-- Search bar-->
+                    <li class="nav-item">
+                      <div id="navbarSupportedContent">
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
+                          <div class="md-form mb-2">
+                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
+                          </div>
+                        </form>
+                      </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -211,7 +260,7 @@
   },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
+  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -739,11 +788,15 @@
                 
 
                 
+                
+                
+
+                
                 </div>
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 11, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jan 29, 2021 </p>
         </blockquote>
 
         <div class="container">
@@ -1149,9 +1202,15 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/<span class="notranslate">g
 
 <p>During the <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html"><span class="notranslate">Galaxy</span> Installation with Ansible</a> tutorial, we acquired an SSL certificate for our <span class="notranslate">Galaxy</span> server from <a href="https://letsencrypt.org/">Let’s Encrypt</a>. This certificate was issued for the hostname of your <span class="notranslate">Galaxy</span> server (e.g. <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>.example.org</code>). SSL certificates are valid <em>only for the name to which they were issued</em>. This presents a problem for us due to the way that <span class="notranslate">Galaxy</span> Interactive Tools work.</p>
 
-<p>In order to ensure each Interactive Tool’s cookies are unique, and to provide each tool with a unique entry point, they are served from a subdomain of your <span class="notranslate">Galaxy</span> server (e.g. <code class="language-plaintext highlighter-rouge">&lt;unique-id&gt;.interactivetoolentrypoint.interactivetool.<span class="notranslate">galaxy</span>.example.org</code>). Your SSL cert is not valid for this subdomain. Further, in order to support the random <code class="language-plaintext highlighter-rouge">&lt;unique-id&gt;</code> in the hostname, we need a <em>wildcard certificate</em> for <code class="language-plaintext highlighter-rouge">*.interactivetoolentrypoint.interactivetool.<span class="notranslate">galaxy</span>.example.org</code>. Let’s Encrypt wildcard certificates <a href="https://letsencrypt.org/docs/faq/">can only be generated using the DNS-01 challenge method</a>, which works by issuing a <a href="https://en.wikipedia.org/wiki/Dynamic_DNS">dynamic DNS</a> update to set the requested domain’s <code class="language-plaintext highlighter-rouge">TXT</code> record. As a result, this process is highly dependent on your site; specifically, your SSL certificate vendor, and your DNS server software or cloud provider.</p>
+<p>In order to ensure each Interactive Tool’s cookies are unique, and to provide each tool with a unique entry point, they are served from a subdomain of your <span class="notranslate">Galaxy</span> server (e.g. <code class="language-plaintext highlighter-rouge">&lt;unique-id&gt;.interactivetoolentrypoint.interactivetool.<span class="notranslate">galaxy</span>.example.org</code>). Your SSL cert is not valid for this subdomain. Further, in order to support the random <code class="language-plaintext highlighter-rouge">&lt;unique-id&gt;</code> in the hostname, we need a <em>wildcard certificate</em> for <code class="language-plaintext highlighter-rouge">*.interactivetoolentrypoint.interactivetool.<span class="notranslate">galaxy</span>.example.org</code>.</p>
 
-<p>If you are completing this tutorial as part of a <a href="https://github.com/galaxyproject/dagobah-training"><span class="notranslate">Galaxy</span> Admin Training</a> course, we have precreated a dynamic DNS server that you will use for this step. The <em>TSIG key</em> that allows you to perform dynamic DNS updates will be provided to you. Your instructor will also tell you which option to follow (1 or 2), depending on the DNS provider that was chosen for this course.</p>
+<p>This process is highly dependent on your site; specifically, your SSL certificate vendor, and your DNS server software or cloud provider.</p>
+
+<p>Let’s Encrypt, the SSL certificate vendor we use in our tutorials, <a href="https://letsencrypt.org/docs/faq/">can only generate wildcard certificates using the DNS-01 challenge method</a>, which works by issuing a <a href="https://en.wikipedia.org/wiki/Dynamic_DNS">dynamic DNS</a> update to set the requested domain’s <code class="language-plaintext highlighter-rouge">TXT</code> record.</p>
+
+<p>If you are completing this tutorial as part of a <a href="https://github.com/galaxyproject/dagobah-training"><span class="notranslate">Galaxy</span> Admin Training</a> course, we might have precreated a dynamic DNS server that you will use for this step. The <em>TSIG key</em> that allows you to perform dynamic DNS updates will be provided to you. Your instructor will also tell you which option to follow (1 or 2), depending on the DNS provider that was chosen for this course.</p>
+
+<p>As we use Let’s Encrypt in staging mode, the wildcard certificates generated with either option 1 or 2 will still be invalid, and you will still see a warning in your web browser when accessing an Interactive Tool. If this warning is not a problem for you, you can just skip this section of the tutorial, and move on to “Enabling Interactive Tools in <span class="notranslate">Galaxy</span>”.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-requesting-a-wildcard-certificate-with-certbot-using-ansible---option-1-rfc2136"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Requesting a Wildcard Certificate with Certbot using Ansible - Option 1 (rfc2136)</h3>
@@ -1739,6 +1798,11 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/<span class="notranslate">g
                     </blockquote>
                     
 
+                    <h1>Frequently Asked Questions</h1>
+                    Have questions about this tutorial? Check out the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
+                    If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
+                    <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+
                     
 
                     
@@ -1779,7 +1843,7 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/<span class="notranslate">g
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
-                            <li id="citation-text">Nate Coraor, Simon Gladman, Helena Rasche, Anthony Bretaudeau, 2020 <b>Galaxy Interactive Tools (Galaxy Training Materials)</b>. <a href="/training-material/topics/admin/tutorials/interactive-tools/tutorial.html">/training-material/topics/admin/tutorials/interactive-tools/tutorial.html</a> Online; accessed TODAY
+                            <li id="citation-text">Nate Coraor, Simon Gladman, Helena Rasche, Anthony Bretaudeau, 2021 <b>Galaxy Interactive Tools (Galaxy Training Materials)</b>. <a href="/training-material/topics/admin/tutorials/interactive-tools/tutorial.html">/training-material/topics/admin/tutorials/interactive-tools/tutorial.html</a> Online; accessed TODAY
                             </li>
                             <li>
                             Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
@@ -1796,9 +1860,9 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/<span class="notranslate">g
 <code id="citation-code">@misc{admin-interactive-tools,
     author = "Nate Coraor and Simon Gladman and Helena Rasche and Anthony Bretaudeau",
     title = "Galaxy Interactive Tools (Galaxy Training Materials)",
-    year = "2020",
-    month = "12",
-    day = "11"
+    year = "2021",
+    month = "01",
+    day = "29"
     url = "\url{/training-material/topics/admin/tutorials/interactive-tools/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1849,7 +1913,7 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         </p>
         <p>
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/galaxyproject/training-material/tree/master/topics/admin/tutorials/interactive-tools/tutorial.md">GitHub</a>.
+            <a href="https://github.com/galaxyproject/training-material/tree/main/topics/admin/tutorials/interactive-tools/tutorial.md">GitHub</a>.
         </p>
         <p>
     The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
