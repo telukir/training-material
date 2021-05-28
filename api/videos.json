@@ -316,6 +316,12 @@
                                
                        
                                
+                       
+                               
+                       
+                               
+                       
+                               
 			{
 				"id": "dev/tutorials/bioblend-api/slides",
 				"topic": "Development in Galaxy",
@@ -333,6 +339,12 @@
                        
                                
                        
+                               
+			{
+				"id": "dev/tutorials/tool-generators/slides",
+				"topic": "Development in Galaxy",
+				"title": "ToolFactory: Generating Tools From Simple Scripts"
+			},
                                
                        
                
