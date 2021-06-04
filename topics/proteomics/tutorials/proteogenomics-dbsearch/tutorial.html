@@ -290,6 +290,7 @@
   "name": "Hands-on for 'Proteogenomics 2: Database Search' tutorial",
   "url": "https://training.galaxyproject.org//training-material/topics/proteomics/tutorials/proteogenomics-dbsearch/tutorial.html",
   "timeRequired": "PT15M",
+  "keywords": "proteogenomics",
   "description": "The questions this  addresses are:\n - How to identify variant proteoforms in MS data by searching with the customized Protein database?\n\n\\nThe objectives are:\n - A proteogenomic data analysis of mass spectrometry data to identify and visualize variant peptides.\n\n",
   "coursePrerequisites": [
     {
@@ -686,6 +687,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
             Street Science
         </a>
@@ -740,7 +743,7 @@
             </ul>
             
 
-            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> May 3, 2021 </div>
+            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> May 31, 2021 </div>
         </blockquote>
 
         <div class="container">
@@ -814,7 +817,7 @@ will be used to match MS/MS to peptide sequences via a sequence database search.
 <h3 id="comment-comment-tool-versions"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment: Tool Versions</h3>
 <blockquote class="comment">
 
-  <p>The tools are subjected to changes while being upgraded. Here we have used an older version of SearchGUI (v3.3.10.1)-Peptide Shaker (v1.16.36.3). 
+  <p>The tools are subjected to changes while being upgraded. Here we have used an older version of SearchGUI (v3.3.10.1)-Peptide Shaker (v1.16.36.3).
 The new versions are available in <span class="notranslate">Galaxy</span>.</p>
 
 </blockquote>
@@ -825,14 +828,14 @@ The new versions are available in <span class="notranslate">Galaxy</span>.</p>
   <h3 id="hands_on-hands-on-searchgui"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: SearchGUI</h3>
 
   <ol>
-    <li><strong>SearchGUI</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/search_gui/3.3.10.1" title="Tested with toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/search_gui/3.3.10.1"><strong>Search GUI</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/<span class="notranslate">galaxy</span>p/peptideshaker/search_gui/3.3.10.1</span></span>  with the following parameters:
       <ul>
         <li>
           <p><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Protein Database”</em>: <code class="language-plaintext highlighter-rouge">Uniprot_cRAP_SAV_indel_translatedbed.FASTA</code> (Or however you named the <code class="language-plaintext highlighter-rouge">FASTA</code> file)</p>
 
           <blockquote class="comment">
             <h3 id="comment-comment"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment:</h3>
-            <p>The “Uniprot_cRAP_SAV_indel_translatedbed” FASTA database is obtained when you run the first proteogenomics <span class="notranslate">workflow</span>. 
+            <p>The “Uniprot_cRAP_SAV_indel_translatedbed” FASTA database is obtained when you run the first proteogenomics <span class="notranslate">workflow</span>.
    Please make sure to run the 1st <span class="notranslate">workflow</span>.</p>
           </blockquote>
         </li>
@@ -955,7 +958,7 @@ outputs.</p>
   <h3 id="hands_on-hands-on-peptideshaker"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: PeptideShaker</h3>
 
   <ol>
-    <li><strong>PeptideShaker</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/1.16.36.3" title="Tested with toolshed.g2.bx.psu.edu/repos/galaxyp/peptideshaker/peptide_shaker/1.16.36.3"><strong>Peptide Shaker</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/<span class="notranslate">galaxy</span>p/peptideshaker/peptide_shaker/1.16.36.3</span></span>  with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Compressed SearchGUI results”</em>: The SearchGUI archive file</li>
         <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Specify Advanced PeptideShaker Processing Options”</em>: <code class="language-plaintext highlighter-rouge">Default Processing Options</code></li>
@@ -990,7 +993,7 @@ used by both SearchGUI and PeptideShaker in the analysis. This can be downloaded
   <p>This tool extracts mzidentml and its associated proteomics datasets into a sqlite db</p>
 
   <ol>
-    <li><strong>mz to sqlite</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/mz_to_sqlite/mz_to_sqlite/2.0.4+galaxy1" title="Tested with toolshed.g2.bx.psu.edu/repos/galaxyp/mz_to_sqlite/mz_to_sqlite/2.0.4+galaxy1"><strong>mz to sqlite</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/<span class="notranslate">galaxy</span>p/mz_to_sqlite/mz_to_sqlite/2.0.4+<span class="notranslate">galaxy</span>1</span></span>  with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Proteomics identification files”</em>: <code class="language-plaintext highlighter-rouge">PeptideShaker_mzidentml</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Proteomics Spectrum files”</em>: <code class="language-plaintext highlighter-rouge">Mo_Tai_MGFs</code></li>
@@ -1214,7 +1217,7 @@ Thus, running the <span class="notranslate">workflow</span> provided with the tu
 
 <h1 class="no_toc" id="conclusion"><strong>Conclusion</strong></h1>
 
-<p>This completes the walkthrough of the proteogenomics database search <span class="notranslate">workflow</span>. This tutorial is a guide to perform database searching with mass spectronetry files and have peptides ready for Blast-P analysis, you can perform follow up analysis using the next GTN “Proteogenomics Novel Peptide Analysis”. 
+<p>This completes the walkthrough of the proteogenomics database search <span class="notranslate">workflow</span>. This tutorial is a guide to perform database searching with mass spectronetry files and have peptides ready for Blast-P analysis, you can perform follow up analysis using the next GTN “Proteogenomics Novel Peptide Analysis”.
 Researchers can use this <span class="notranslate">workflow</span> with their data also, please note that the tool parameters, reference genomes and the <span class="notranslate">workflow</span> will be needed to be modified accordingly.</p>
 
 <p>This <span class="notranslate">workflow</span> was developed by the <span class="notranslate">Galaxy</span>-P team at the University of Minnesota. For more information about <span class="notranslate">Galaxy</span>-P or our ongoing work, please visit us at <a href="https://galaxyp.org"><span class="notranslate">galaxy</span>p.org</a></p>
@@ -1300,7 +1303,7 @@ Researchers can use this <span class="notranslate">workflow</span> with their da
     title = "Proteogenomics 2: Database Search (Galaxy Training Materials)",
     year = "2021",
     month = "05",
-    day = "03"
+    day = "31"
     url = "\url{/training-material/topics/proteomics/tutorials/proteogenomics-dbsearch/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
