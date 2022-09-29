@@ -16,6 +16,22 @@
         <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+        <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml" />
+        <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html" />
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+
+        <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material" />
+<meta name="DC.type" content="text" />
+<meta name="DC.title" content="Metatranscriptomics analysis using microbiome RNA-seq data" />
+<meta name="DC.publisher" content="Galaxy Training Network" />
+<meta name="DC.date" content="1970-01-01 00:00:20 +0000" />
+<meta name="DC.creator" content="Pratik Jagtap" />
+<meta name="DC.creator" content="Subina Mehta" />
+<meta name="DC.creator" content="Ray Sajulga" />
+<meta name="DC.creator" content="Bérénice Batut" />
+<meta name="DC.creator" content="Emma Leith" />
+<meta name="DC.creator" content="Praveen Kumar" />
+<meta name="DC.creator" content="Saskia Hiltemann" />
 
         
         
@@ -23,35 +39,15 @@
         
         
         <meta name="description" content="Metagenomics is a discipline that enables the genomic stu..." />
+        <meta property="og:site_name" content="Galaxy Training Network" />
         <meta property="og:title" content="Galaxy Training: Metatranscriptomics analysis using microbiome RNA-seq data" />
         <meta property="og:description" content="Metagenomics is a discipline that enables the genomic stu..." />
         <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
     </head>
     <body data-spy="scroll" data-target="#toc">
-        
-
-
-
-
-
-
-
-
-
-
-
-<!-- Gitter -->
-
-
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+        <header>
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
             <a class="navbar-brand" href="/training-material/">
                 <img src="/training-material/assets/images/GTN-60px.png" height="30" alt="Galaxy Training Network logo">
@@ -64,9 +60,45 @@
             <div class="collapse navbar-collapse" id="top-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        
                         <a class="nav-link" href="/training-material/topics/metagenomics" title="Go back to list of tutorials">
-                            <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">topic</span> Metagenomics
+                            <i class="far fa-folder" aria-hidden="true"></i> Metagenomics
                         </a>
+                        
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Languages">
+                            <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Languages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            
+                              <strong class="dropdown-header">Automatic Translations</strong>
+            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
+                            Français
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
+                            日本語
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
+                            Español
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
+                            Português
+                            </a>
+                            
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
+                            العربية
+                            </a>
+                            
+                            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url" title="">
+                            And more!
+                            </a>
+                        </div>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -111,7 +143,7 @@
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
-        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this rrepository">
+        <a class="dropdown-item" href="/training-material/stats.html" title="Show view statistics about this repository">
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN statistics
         </a>
 
@@ -119,40 +151,11 @@
             <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> Page Metrics
         </a>
 
-        <div class="dropdown-item">
-            <div>
-                <i class="fas fa-language" aria-hidden="true"></i><span class="visually-hidden">language</span> Translate this page
-            </div>
-
-            <div id="lang-selector">
-                
-                <strong>Automatic Translations</strong>
-
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
-                Français
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
-                日本語
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
-                Español
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
-                Português
-                </a>
-                
-<a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html&edit-text=&act=url">
-                العربية
-                </a>
-                
-                <a class="btn btn-info" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fmetagenomics%2Ftutorials%2Fmetatranscriptomics%2Ftutorial.html&edit-text=&act=url" title="">
-                And more!
-                </a>
-            </div>
-        </div>
+        
+            <a class="dropdown-item" href="/training-material/feedback.html" title="Show feedback statistics about this repository">
+                <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> GTN feedback
+            </a>
+        
 
         <div class="dropdown-item">
             <div>
@@ -172,6 +175,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="progress" class="btn btn-secondary">
+                    <input type="radio" name="options" id="progress" autocomplete="off">🏳️‍🌈
+                </label>
                 <label data-value="halloween" class="btn btn-secondary">
                     <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
@@ -181,20 +187,33 @@
             </div>
 
         </div>
+
+        <div class="dropdown-item">
+            <div>
+                <i class="fas fa-history" aria-hidden="true"></i><span class="visually-hidden">galaxy-rulebuilder-history</span> Previous Versions
+            </div>
+
+            
+            <div id="archive-selector">
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2019-08-01/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html" title="Version 2019-08-01">2019-08-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2019-07-01/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html" title="Version 2019-07-01">2019-07-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2019-06-01/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html" title="Version 2019-06-01">2019-06-01</a>
+            
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+            </div>
+
+        </div>
+
     </div>
 </li>
 
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/galaxyproject/training-material/edit/main/topics/metagenomics/tutorials/metatranscriptomics/tutorial.md">
-                            <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit
-                        </a>
-                    </li>
-                    -->
 
-                     <!-- Search bar-->
+                    <!-- Search bar-->
                     <li class="nav-item">
-                      <div id="navbarSupportedContent">
+                      <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
                         <form class="form-inline mr-auto" method="GET" action="/training-material/search">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
@@ -204,41 +223,51 @@
                         </form>
                       </div>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 
-<div class="container main-content">
-    <script type="application/ld+json">
+        <div class="container main-content" role="main">
         
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gitter -->
+
+
+
+
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+  room: 'Galaxy-Training-Network/Lobby'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<script type="application/ld+json">
+    
 
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -251,16 +280,13 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "dateModified": "1970-01-01 00:00:20 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Metatranscriptomics analysis using microbiome RNA-seq data",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "isFamilyFriendly": true,
+  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -279,23 +305,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Metagenomics",
     "description": "Metagenomics is a discipline that enables the genomic study of uncultured microorganisms",
-    "url": "https://training.galaxyproject.org//training-material/topics/metagenomics/"
+    "url": "https://training.galaxyproject.org/training-material/topics/metagenomics/"
   },
-  "courseCode": "metagenomics / metatranscriptomics / hands-on",
   "learningResourceType": "hands-on tutorial",
   "name": "Hands-on for 'Metatranscriptomics analysis using microbiome RNA-seq data' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html",
   "timeRequired": "PT5H",
-  "keywords": "metatranscriptomics",
+  "keywords": "metagenomics, metatranscriptomics",
   "description": "The questions this  addresses are:\n - How to analyze metatranscriptomics data?\n - What information can be extracted of metatranscriptomics data?\n - How to assign taxa and function to the identified sequences?\n\n\\nThe objectives are:\n - Choose the best approach to analyze metatranscriptomics data\n - Understand the functional microbiome characterization using metatranscriptomic results\n - Understand where metatranscriptomics fits in 'multi-omic' analysis of microbiomes\n - Visualise a community structure\n\n",
-  "coursePrerequisites": [
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -306,67 +355,314 @@
       }
     }
   ],
-  "hasPart": [
-
-  ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Pratik Jagtap"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/pratikdjagtap/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/pratikdjagtap/",
+      "name": "Pratik Jagtap",
+      "image": "https://avatars.githubusercontent.com/pratikdjagtap",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Subina Mehta"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/subinamehta/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/subinamehta/",
+      "name": "Subina Mehta",
+      "image": "https://avatars.githubusercontent.com/subinamehta",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9818-0537",
+      "orcid": "https://orcid.org/0000-0001-9818-0537"
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Ray Sajulga"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jraysajulga/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jraysajulga/",
+      "name": "Ray Sajulga",
+      "image": "https://avatars.githubusercontent.com/jraysajulga",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Bérénice Batut"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "name": "Bérénice Batut",
+      "image": "https://avatars.githubusercontent.com/bebatut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9852-1987",
+      "orcid": "https://orcid.org/0000-0001-9852-1987"
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Emma Leith"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/emmaleith/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/emmaleith/",
+      "name": "Emma Leith",
+      "image": "https://avatars.githubusercontent.com/emmaleith",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Praveen Kumar"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/pravs3683/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/pravs3683/",
+      "name": "Praveen Kumar",
+      "image": "https://avatars.githubusercontent.com/pravs3683",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Saskia Hiltemann"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
+      "name": "Saskia Hiltemann",
+      "image": "https://avatars.githubusercontent.com/shiltemann",
+      "description": "Researcher at Erasmus Medical Center",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0003-3803-468X",
+      "orcid": "https://orcid.org/0000-0003-3803-468X"
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Pratik Jagtap"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/pratikdjagtap/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/pratikdjagtap/",
+      "name": "Pratik Jagtap",
+      "image": "https://avatars.githubusercontent.com/pratikdjagtap",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Subina Mehta"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/subinamehta/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/subinamehta/",
+      "name": "Subina Mehta",
+      "image": "https://avatars.githubusercontent.com/subinamehta",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9818-0537",
+      "orcid": "https://orcid.org/0000-0001-9818-0537"
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Ray Sajulga"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/jraysajulga/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/jraysajulga/",
+      "name": "Ray Sajulga",
+      "image": "https://avatars.githubusercontent.com/jraysajulga",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Bérénice Batut"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "name": "Bérénice Batut",
+      "image": "https://avatars.githubusercontent.com/bebatut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9852-1987",
+      "orcid": "https://orcid.org/0000-0001-9852-1987"
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Emma Leith"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/emmaleith/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/emmaleith/",
+      "name": "Emma Leith",
+      "image": "https://avatars.githubusercontent.com/emmaleith",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Praveen Kumar"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/pravs3683/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/pravs3683/",
+      "name": "Praveen Kumar",
+      "image": "https://avatars.githubusercontent.com/pravs3683",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Saskia Hiltemann"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/",
+      "name": "Saskia Hiltemann",
+      "image": "https://avatars.githubusercontent.com/shiltemann",
+      "description": "Researcher at Erasmus Medical Center",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0003-3803-468X",
+      "orcid": "https://orcid.org/0000-0003-3803-468X"
     }
   ],
   "about": [
@@ -374,7 +670,7 @@
       "@type": "CreativeWork",
       "name": "Metagenomics",
       "description": "Metagenomics is a discipline that enables the genomic study of uncultured microorganisms",
-      "url": "https://training.galaxyproject.org//training-material/topics/metagenomics/"
+      "url": "https://training.galaxyproject.org/training-material/topics/metagenomics/"
     },
     {
       "@type": "DefinedTerm",
@@ -384,57 +680,91 @@
       "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3174"
     }
   ],
-  "skillLevel": "Introductory"
+  "educationalLevel": "Beginner"
 }
-    </script>
+</script>
 
-    <section class="tutorial">
-        <h1 data-toc-skip>Metatranscriptomics analysis using microbiome RNA-seq data</h1>
-        
+<section class="tutorial topic-metagenomics">
+    <h1 data-toc-skip>Metatranscriptomics analysis using microbiome RNA-seq data</h1>
+    
 
-        <div class="contributors-line">By: 
+    <div markdown="0">
 
- <a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pratikdjagtap" alt="Pratik Jagtap">Pratik Jagtap</a> <a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/subinamehta" alt="Subina Mehta">Subina Mehta</a> <a href="/training-material/hall-of-fame/jraysajulga/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jraysajulga" alt="Ray Sajulga">Ray Sajulga</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a> <a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/emmaleith" alt="Emma Leith">Emma Leith</a> <a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pravs3683" alt="Praveen Kumar">Praveen Kumar</a> <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
+	<div class="contributors-line">
+		Authors: 
+<a href="/training-material/hall-of-fame/pratikdjagtap/" class="contributor-badge contributor-pratikdjagtap"><img src="https://avatars.githubusercontent.com/pratikdjagtap?s=27" alt="Avatar">Pratik Jagtap</a>
+
+
+
+<a href="/training-material/hall-of-fame/subinamehta/" class="contributor-badge contributor-subinamehta"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/subinamehta?s=27" alt="Avatar">Subina Mehta</a>
+
+
+
+<a href="/training-material/hall-of-fame/jraysajulga/" class="contributor-badge contributor-jraysajulga"><img src="https://avatars.githubusercontent.com/jraysajulga?s=27" alt="Avatar">Ray Sajulga</a>
+
+
+
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
+
+
+
+<a href="/training-material/hall-of-fame/emmaleith/" class="contributor-badge contributor-emmaleith"><img src="https://avatars.githubusercontent.com/emmaleith?s=27" alt="Avatar">Emma Leith</a>
+
+
+
+<a href="/training-material/hall-of-fame/pravs3683/" class="contributor-badge contributor-pravs3683"><img src="https://avatars.githubusercontent.com/pravs3683?s=27" alt="Avatar">Praveen Kumar</a>
+
+
+
+<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a>
+
+
+
+	</div>
 
 </div>
 
-        <blockquote class="overview">
-            <h3>Overview</h3>
-            <strong><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
-            <ul>
-            
-            <li><p>How to analyze metatranscriptomics data?</p>
-</li>
-            
-            <li><p>What information can be extracted of metatranscriptomics data?</p>
-</li>
-            
-            <li><p>How to assign taxa and function to the identified sequences?</p>
-</li>
-            
-            </ul>
 
-            <strong><i class="fas fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
-            <ul>
-            
-            <li><p>Choose the best approach to analyze metatranscriptomics data</p>
+    <blockquote class="overview">
+        <h3>Overview</h3>
+        
+        <img alt="Creative Commons License" class="float-right" style="border-width:0; display: inline-block; margin:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" aria-hidden="true" />
+        
+        <strong><i class="far fa-question-circle" aria-hidden="true"></i> Questions:</strong>
+        <ul>
+        
+        <li><p>How to analyze metatranscriptomics data?</p>
 </li>
-            
-            <li><p>Understand the functional microbiome characterization using metatranscriptomic results</p>
+        
+        <li><p>What information can be extracted of metatranscriptomics data?</p>
 </li>
-            
-            <li><p>Understand where metatranscriptomics fits in ‘multi-omic’ analysis of microbiomes</p>
+        
+        <li><p>How to assign taxa and function to the identified sequences?</p>
 </li>
-            
-            <li><p>Visualise a community structure</p>
-</li>
-            
-            </ul>
+        
+        </ul>
 
-            
-            <strong><i class="fas fa-check-circle" aria-hidden="true"></i><span class="visually-hidden">requirements</span> Requirements</strong>
-            <ul>
-            
+        <strong><i class="fas fa-bullseye" aria-hidden="true"></i> Objectives: </strong>
+        <ul>
+        
+        <li><p>Choose the best approach to analyze metatranscriptomics data</p>
+</li>
+        
+        <li><p>Understand the functional microbiome characterization using metatranscriptomic results</p>
+</li>
+        
+        <li><p>Understand where metatranscriptomics fits in ‘multi-omic’ analysis of microbiomes</p>
+</li>
+        
+        <li><p>Visualise a community structure</p>
+</li>
+        
+        </ul>
+
+        
+        <strong><i class="fas fa-check-circle" aria-hidden="true"></i> Requirements:</strong>
+        <ul>
+        
     <li>
     
         
@@ -444,66 +774,126 @@
     
     </li>
 
-            
-            </ul>
-            
+        
+        </ul>
+        
 
-            
-            <div><strong><i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 5 hours</div>
-            
+        
+        <div><strong><i class="fas fa-hourglass-half" aria-hidden="true"></i> Time estimation:</strong> 5 hours</div>
+        
 
-            
-            <div><strong><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> Level: </strong>
-             Introductory 
+        
+        <div><strong><i class="fas fa-graduation-cap" aria-hidden="true"></i> Level: </strong>
+        
+
+
+ Introductory <span class="visually-hidden">Introductory</span>
 <span class="level introductory" title="Introductory Tutorial">
-  <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span> <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>
+  <i class="fas fa-graduation-cap" aria-hidden="true"></i> <i class="fas fa-graduation-cap" aria-hidden="true"></i> <i class="fas fa-graduation-cap" aria-hidden="true"></i>
 </span>
 
 </div>
+        
+
+        
+        
+
+        
+        <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials:</strong></div>
+        <ul class="supporting_material">
+            
+                <li class="btn btn-default"><a href="/training-material/topics/metagenomics/tutorials/metatranscriptomics/slides.html" title="Slides for this tutorial">
+                    <i class="fab fa-slideshare" aria-hidden="true"></i> Slides
+                </a></li>
             
 
             
-            
+                <li class="btn btn-default supporting_material">
 
-            
-            <div id="supporting-materials"><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-            <ul>
-                <div class="supporting_material">
-                
-                    <li class="btn btn-default"><a href="/training-material/topics/metagenomics/tutorials/metatranscriptomics/slides.html" title="Slides for this tutorial">
-                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Slides
-                    </a></li>
-                
 
-                
-                    <li class="btn btn-default supporting_material">
-<a class="topic-icon" href="https://zenodo.org/record/4776250">
-    <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">zenodo_link</span> Datasets
+<a class="topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/4776250">
+    <i class="far fa-copy" aria-hidden="true"></i> Datasets
 </a>
 
 </li>
-                
+            
 
-                
-                    <li class="btn btn-default supporting_material">
+            
+                <li class="btn btn-default supporting_material">
+
+
     <a class="topic-icon" href="/training-material/topics/metagenomics/tutorials/metatranscriptomics/workflows/" title="Workflows" alt="Metatranscriptomics analysis using microbiome RNA-seq data workflows">
-        <i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">workflow</span> Workflows
+        <i class="fas fa-share-alt" aria-hidden="true"></i> Workflows
     </a>
 
 </li>
-                
+            
 
-                
+            
 
-                
-                
-                
+            
 
-                
-                    <li class="btn btn-default supporting_material">
+            
+            
+            
+                 <li class="btn btn-default supporting_material">
+    <a class="topic-icon" href="/training-material/topics/metagenomics/tutorials/metatranscriptomics/faqs/" title="Frequently Asked Questions" alt="Tutorial FAQs">
+        <i class="far fa-question-circle" aria-hidden="true"></i> FAQs
+    </a>
+  </li>
+
+
+            
+
+            <!-- Check the GTN Video Library for recordings of this tutorial or associated slides -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <li class="btn btn-default supporting_material">
+    <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Latest recordings of this tutorial in the GTN Video Library">
+        <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>&nbsp;Recordings
+    </a>
+    <ul class="dropdown-menu">
+        
+        
+        
+        
+
+        <li>
+
+            <a class="dropdown-item" href="https://gallantries.github.io/video-library/videos/metagenomics/metatranscriptomics" title="View GTN Video Library for this Tutorial">
+                <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span> Lecture & Tutorial (February 2021)
+            </a>
+        </li>
+        
+        
+        
+        
+        
+    </ul>
+   </li>
+   
+
+
+
+            
+                <li class="btn btn-default supporting_material">
+
 
     <a href="#" class="btn btn-default dropdown-toggle topic-icon" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
-        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span> Available on these Galaxies
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
     </a>
     <ul class="dropdown-menu">
     
@@ -514,181 +904,36 @@
         </li>
     
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
-            Galaxy Africa
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://metagenomics.usegalaxy.eu/" title="Metagenomics">
-            Metagenomics
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://plants.usegalaxy.eu/" title="Plant Anaylsis Workbench">
-            Plant Anaylsis Workbench
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://streetscience.usegalaxy.eu/" title="Street Science">
-            Street Science
-        </a>
-        
-    
-        
-    
-        
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
-            UseGalaxy.eu
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
     </ul>
 
 
 </li>
-                
-                </div>
-            </ul>
             
+        </ul>
+        
 
-            <div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> May 20, 2021 </div>
-        </blockquote>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 20, 2021 </div>
+        <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+            
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>
+            
+            <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">The GTN Framework is licensed under MIT</a>
+        </div>
+    </blockquote>
 
-        <div class="container">
-            <div class="row">
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2">
-                    <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
-                </div>
-                <div class="col-sm-10">
-                    
+    <div class="container">
+        <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-2">
+                <nav id="toc" data-toggle="toc" class="sticky-top" aria-label="Table of Contents"></nav>
+            </div>
+            <div class="col-sm-10">
+                 
+
+                
 <h1 id="overview">Overview</h1>
 
-<p>In this tutorial we will perform a metatranscriptomics analysis based on the ASAIM <span class="notranslate">workflow</span> (<a class="citation" href="#batut2018asaim">Batut <i>et al.</i> 2018</a>), using data from <a class="citation" href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a>.</p>
+<p>In this tutorial we will perform a metatranscriptomics analysis based on the ASAIM <span class="notranslate">workflow</span> (<span class="citation"><a href="#batut2018asaim">Batut <i>et al.</i> 2018</a></span>), using data from <span class="citation"><a href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a></span>.</p>
 
 <blockquote class="comment">
   <h3 id="comment-note-two-versions-of-this-tutorial"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Note: Two versions of this tutorial</h3>
@@ -708,7 +953,7 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
 
 <p><img src="../../images/metatranscriptomics/Why_MT.png" alt="Multiomics" /></p>
 
-<p>New generations of sequencing platforms coupled to numerous bioinformatics tools have led to a spectacular technological progress in metagenomics and metatranscriptomics to investigate complex microorganism communities. These techniques are giving insight into taxonomic profiles and genomic components of microbial communities. Metagenomics is packed with information about the present taxonomies in a microbiome, but do not tell much about important functions. That is where metatranscriptomics and metaproteomics play a big part.</p>
+<p>New generations of sequencing platforms coupled to numerous bioinformatic tools have led to a spectacular technological progress in metagenomics and metatranscriptomics to investigate complex microorganism communities. These techniques are giving insight into taxonomic profiles and genomic components of microbial communities. Metagenomics is packed with information about the present taxonomies in a microbiome, but do not tell much about important functions. That is where metatranscriptomics and metaproteomics play a big part.</p>
 
 <p><img src="../../images/metatranscriptomics/meta-omics.png" alt="meta-momics diagram" /></p>
 
@@ -716,11 +961,11 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
 
 <p>Metatranscriptomics analysis enables understanding of how the microbiome responds to the environment by studying the functional analysis of genes expressed by the microbiome. It can also estimate the taxonomic composition of the microbial population. It provides scientists with the confirmation of predicted open‐reading frames (ORFs) and potential identification of novel sites of transcription and/or translation from microbial genomes. Metatranscriptomics can enable more complete generation of protein sequences databases for metaproteomics.</p>
 
-<p>To illustrate how to analyze metatranscriptomics data, we will use data from time-series analysis of a microbial community inside a bioreactor (<a class="citation" href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a>). They generated metatranscriptomics data for 3 replicates over 7 time points. <span class="notranslate">RNA</span>s were enriched by r<span class="notranslate">RNA</span> depletion and treated with <span class="notranslate">DNA</span>se and library was prepared with the TruSeq stranded <span class="notranslate">RNA</span> sample preparation, which included the production of a c<span class="notranslate">DNA</span> library.</p>
+<p>To illustrate how to analyze metatranscriptomics data, we will use data from time-series analysis of a microbial community inside a bioreactor (<span class="citation"><a href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a></span>). They generated metatranscriptomics data for 3 replicates over 7 time points. Before amplification the amount of r<span class="notranslate">RNA</span> was reduced by r<span class="notranslate">RNA</span> depletion. The sequencing libray was prepared with the TruSeq stranded <span class="notranslate">RNA</span> sample preparation, which included the production of a c<span class="notranslate">DNA</span> library.</p>
 
-<p>In this tutorial, we focus on biological replicate A of the 1st time point. In a follow-up tutorial we will illustrate how compare the results over the different time points and replicates. The input files used here are trimmed version of the original file for the purpose of saving time and resources.</p>
+<p>In this tutorial, we focus on biological replicate A of the 1st time point. In a follow-up tutorial we will illustrate how to compare the results over the different time points and replicates. The input files used here are trimmed version of the original file for the purpose of saving time and resources.</p>
 
-<p>To analyze the data, we will follow the ASaiM <span class="notranslate">workflow</span> and explain it step by step. ASaiM (<a class="citation" href="#batut2018asaim">Batut <i>et al.</i> 2018</a>) is an open-source <span class="notranslate">Galaxy</span>-based <span class="notranslate">workflow</span> that enables microbiome analyses. Its <span class="notranslate">workflow</span> offers a streamlined <span class="notranslate">Galaxy</span> <span class="notranslate">workflow</span> for users to explore metagenomic/metatranscriptomic data in a reproducible and transparent environment. The ASaiM <span class="notranslate">workflow</span> has been updated by the <strong><span class="notranslate">Galaxy</span>P</strong> team (University of Minnesota) to perform metatranscriptomics analysis of large microbial datasets.</p>
+<p>To analyze the data, we will follow the ASaiM <span class="notranslate">workflow</span> and explain it step by step. ASaiM (<span class="citation"><a href="#batut2018asaim">Batut <i>et al.</i> 2018</a></span>) is an open-source <span class="notranslate">Galaxy</span>-based <span class="notranslate">workflow</span> that enables microbiome analyses. Its <span class="notranslate">workflow</span> offers a streamlined <span class="notranslate">Galaxy</span> <span class="notranslate">workflow</span> for users to explore metagenomic/metatranscriptomic data in a reproducible and transparent environment. The ASaiM <span class="notranslate">workflow</span> has been updated by the <strong><span class="notranslate">Galaxy</span>P</strong> team (University of Minnesota) to perform metatranscriptomics analysis of large microbial datasets.</p>
 
 <p>The <span class="notranslate">workflow</span> described in this tutorial takes in paired-end datasets of raw shotgun sequences (in FastQ format) as an input and proceeds to:</p>
 
@@ -728,7 +973,7 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
   <li>Preprocess</li>
   <li>Extract and analyze the community structure (taxonomic information)</li>
   <li>Extract and analyze the community functions (functional information)</li>
-  <li>Combine taxonomic and functional information to offer insights into taxonomic contribution to a function or functions expressed by a particular taxonomy.</li>
+  <li>Combine taxonomic and functional information to offer insights into the taxonomic contribution to a function or functions expressed by a particular taxonomy.</li>
 </ol>
 
 <p>A graphical representation of the ASaiM <span class="notranslate">workflow</span> which we will be using today is given below:</p>
@@ -779,9 +1024,9 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
       <p>Create a new history for this tutorial and give it a proper name</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panelIf the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>    <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>    <li>Select the option <strong>Create New</strong> from the menu</li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-creating-a-new-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Creating a new history</h3>  <p>Click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel.</p>  <p>If the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> is missing:</p>  <ol>  <li>Click on the <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-gear</span> icon (<strong>History options</strong>) on the top of the history panel</li>  <li>Select the option <strong>Create New</strong> from the menu</li></ol></blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history</h3>  <ol>    <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>    <li>Type the new name</li>    <li>Press <kbd>Enter</kbd></li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a history</h3>  <ol>  <li>Click on <strong>Unnamed history</strong> (or the current name of the history) (<strong>Click to rename history</strong>) at the top of your history panel</li>  <li>Type the new name</li>  <li>Press <kbd>Enter</kbd></li></ol></blockquote>
     </li>
     <li>
       <p><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span>  <code class="language-plaintext highlighter-rouge">T1A_forward</code> and <code class="language-plaintext highlighter-rouge">T1A_reverse</code> from <a href="https://zenodo.org/record/4776250">Zenodo</a> or from the data library (ask your instructor)</p>
@@ -791,9 +1036,9 @@ https://zenodo.org/record/4776250/files/T1A_reverse.fastqsanger
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>    <li>Copy the link location</li>    <li>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</li>    <li>Select <strong>Paste/Fetch Data</strong></li>    <li>Paste the link into the text field</li>    <li>Press <strong>Start</strong></li>    <li><strong>Close</strong> the windowBy default, <span class="notranslate">Galaxy</span> uses the URL as the name, so rename the files with a more useful name.</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-via-links"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing via links</h3>  <ul>  <li>Copy the link location</li>  <li>    <p>Open the <span class="notranslate">Galaxy</span> Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-upload</span> on the top-right of the tool panel)</p>  </li>  <li>Select <strong>Paste/Fetch Data</strong></li>  <li>    <p>Paste the link into the text field</p>  </li>  <li>    <p>Press <strong>Start</strong></p>  </li>  <li><strong>Close</strong> the window</li></ul></blockquote>
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>    <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>    <li>Find the correct folder (ask your instructor)</li>    <li>Select the desired files</li>    <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>    <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>    <li>Click on <strong>Import</strong></li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-importing-data-from-a-data-library"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Importing data from a data library</h3>  <p>As an alte<span class="notranslate">rna</span>tive to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>  <ul>  <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>  <li>Navigate to the correct folder as indicated by your instructor</li>  <li>Select the desired files</li>  <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>  <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>  <li>Click on <strong>Import</strong></li></ul></blockquote>
 
       <p>As default, <span class="notranslate">Galaxy</span> takes the link as name, so rename them.</p>
     </li>
@@ -801,13 +1046,13 @@ https://zenodo.org/record/4776250/files/T1A_reverse.fastqsanger
       <p><strong>Rename</strong> <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> the files to <code class="language-plaintext highlighter-rouge">T1A_forward</code> and <code class="language-plaintext highlighter-rouge">T1A_reverse</code></p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, change the <strong>Name</strong> field</li>    <li>Click the <strong>Save</strong> button</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-renaming-a-dataset"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Renaming a dataset</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, change the <strong>Name</strong> field</li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
     <li>
       <p>Check that the datatype is <code class="language-plaintext highlighter-rouge">fastqsanger</code> (e.g. <strong>not</strong> <code class="language-plaintext highlighter-rouge">fastq</code>). If it is not, please change the datatype to <code class="language-plaintext highlighter-rouge">fastqsanger</code>.</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>    <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>    <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>    <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code></li>    <li>Click the <strong>Change datatype</strong> button</li>  </ul></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-changing-the-datatype"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Changing the datatype</h3>  <ul>  <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>  <li>In the central panel, click on the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>  <li>Select <code class="language-plaintext highlighter-rouge">fastqsanger</code>    <ul>      <li>tip: you can start typing the datatype into the field to filter the dropdown menu</li>    </ul>  </li>  <li>Click the <strong>Save</strong> button</li></ul></blockquote>
     </li>
   </ol>
 
@@ -840,7 +1085,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-select-multiple-datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets</h3>  <ol>    <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>    <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li>  </ol></blockquote>
+      <blockquote class="tip">  <h3 data-toc-skip="" id="-tip-select-multiple-datasets"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden"></span> Tip: Select multiple datasets</h3>  <ol>  <li>Click on <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <strong>Multiple datasets</strong></li>  <li>Select several files by keeping the <kbd>Ctrl</kbd> (or<kbd>COMMAND</kbd>) key pressed and clicking on the files of interest</li></ol></blockquote>
     </li>
     <li>
       <p>Inspect the webpage output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for the <code class="language-plaintext highlighter-rouge">T1A_forward</code> dataset</p>
@@ -879,7 +1124,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 </blockquote>
 
-<p>For more information about how to interpret the plots generated by FastQC and MultiQC, please see <a href="/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html#assess-the-read-quality">this section</a> in our dedicated Quality Control Tutorial.</p>
+<p>For more information about how to interpret the plots generated by FastQC and MultiQC, please see <a href="/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html#assess-quality-with-fastqc---short--long-reads">this section</a> in our dedicated Quality Control Tutorial.</p>
 
 <blockquote class="question">
   <h3 id="question-questions-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -887,7 +1132,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
   <p>Inspect the webpage output from MultiQC</p>
 
   <ol>
-    <li>How many sequences does each file have?</li>
+    <li>How many sequences does each file has?</li>
     <li>How is the quality score over the <span class="notranslate">reads</span>? And the mean score?</li>
     <li>Is there any bias in base content?</li>
     <li>How is the GC content?</li>
@@ -959,7 +1204,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 <p>Even though our data is already of pretty high quality, we can improve it even more by:</p>
 <ol>
   <li>Trimming <span class="notranslate">reads</span> to remove bases that were sequenced with low certainty (= low-quality bases) at the ends of the <span class="notranslate">reads</span></li>
-  <li>Removing <span class="notranslate">reads</span> of overall bad quality.</li>
+  <li>Removing <span class="notranslate">reads</span> of overall bad quality</li>
   <li>Removing <span class="notranslate">reads</span> that are too short to be informative in <span class="notranslate">downstream</span> analysis</li>
 </ol>
 
@@ -976,7 +1221,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 </blockquote>
 
-<p>There are several tools out there that can perform these steps, but in this analysis we use <strong>Cutadapt</strong> (<a class="citation" href="#martin2011cutadapt">Martin 2011</a>).</p>
+<p>There are several tools out there that can perform these steps, but in this analysis we use <strong>Cutadapt</strong> (<span class="citation"><a href="#martin2011cutadapt">Martin 2011</a></span>).</p>
 
 <p><strong>Cutadapt</strong> also helps find and remove adapter sequences, primers, poly-A tails and/or other unwanted sequences from the input FASTQ files. It trims the input <span class="notranslate">reads</span> by finding the adapter or primer sequences in an error-tolerant way. Additional features include modifying and filtering <span class="notranslate">reads</span>.</p>
 
@@ -1042,7 +1287,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
   <p>Inspect the output report from <strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>.</p>
 
   <ol>
-    <li>How many basepairs has been removed from the forwards <span class="notranslate">reads</span> because of bad quality? And from the reverse <span class="notranslate">reads</span>?</li>
+    <li>How many basepairs have been removed from the forwards <span class="notranslate">reads</span> because of bad quality? And from the reverse <span class="notranslate">reads</span>?</li>
     <li>How many sequence pairs have been removed because at least one read was shorter than the length cutoff?</li>
   </ol>
 
@@ -1059,7 +1304,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 <p>Metatranscriptomics sequencing targets any <span class="notranslate">RNA</span> in a pool of micro-organisms. The highest proportion of the <span class="notranslate">RNA</span> sequences in any organism will be ribosomal <span class="notranslate">RNA</span>s.</p>
 
-<p>These r<span class="notranslate">RNA</span>s are useful for the taxonomic assignment (i.e. which organisms are found) but they do not provide any functional information, (i.e. which genes are expressed) To make the <span class="notranslate">downstream</span> functional annotation faster, we will sort the r<span class="notranslate">RNA</span> sequences using <strong>SortMe<span class="notranslate">RNA</span></strong> (<a class="citation" href="#kopylova2012sortmerna">Kopylova <i>et al.</i> 2012</a>). It can handle large <span class="notranslate">RNA</span> databases and sort out all fragments matching to the database with high accuracy and specificity:</p>
+<p>These r<span class="notranslate">RNA</span>s are useful for the taxonomic assignment (i.e. which organisms are found) but they do not provide any functional information, (i.e. which genes are expressed). To make the <span class="notranslate">downstream</span> functional annotation faster, we will sort the r<span class="notranslate">RNA</span> sequences using <strong>SortMe<span class="notranslate">RNA</span></strong> (<span class="citation"><a href="#kopylova2012sortmerna">Kopylova <i>et al.</i> 2012</a></span>). It can handle large <span class="notranslate">RNA</span> databases and sort out all fragments matching to the database with high accuracy and specificity:</p>
 
 <p><img src="../../images/metatranscriptomics/sortmerna.png" alt="SortMeRNA" /></p>
 
@@ -1189,7 +1434,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 <ul>
   <li>
-    <p>Identification and classification of OTUs, as used in amplicon data</p>
+    <p>Identification and classification of Operational Taxonomic Units OTUs, as used in amplicon data</p>
 
     <p>Such an approach first requires sequence sorting to extract only the 16S and 18S sequences (e.g. using the aligned <span class="notranslate">reads</span> from <strong>SortMe<span class="notranslate">RNA</span></strong>), then again using the same tools as for amplicon data (as explained in tutorials like <a href="/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">16S Microbial Analysis with mothur</a> or <a href="/training-material/topics/metagenomics/tutorials/nanopore-16S-metagenomics/tutorial.html">16S Microbial analysis with Nanopore data</a>).</p>
 
@@ -1200,7 +1445,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
   </li>
 </ul>
 
-<p>In this tutorial, we follow second approach using <strong>MetaPhlAn</strong> ((missing reference)). This tool uses a database of ~1M unique clade-specific marker genes (not only the r<span class="notranslate">RNA</span> genes) identified from ~17,000 reference (bacterial, archeal, viral and eukaryotic) genomes.</p>
+<p>In this tutorial, we follow second approach using <strong>MetaPhlAn</strong> (<span class="citation"><a href="#truong2015metaphlan2">Truong <i>et al.</i> 2015</a></span>). This tool uses a database of ~1M unique clade-specific marker genes (not only the r<span class="notranslate">RNA</span> genes) identified from ~17,000 reference (bacterial, archeal, viral and eukaryotic) genomes.</p>
 
 <p>As r<span class="notranslate">RNA</span>s <span class="notranslate">reads</span> are good marker genes, we will use directly the quality controlled files (output of <strong>Cutadapt</strong>) with all <span class="notranslate">reads</span> (not only the non r<span class="notranslate">RNA</span>s).</p>
 
@@ -1224,7 +1469,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
             </li>
             <li><em>“Database with clade-specific marker genes”</em>: <code class="language-plaintext highlighter-rouge">Locally cached</code>
               <ul>
-                <li><em>“Cached database with clade-specific marker genes”</em>: <code class="language-plaintext highlighter-rouge">MetaPhlAn2 clade-specific marker genes (mpa_v30_CHOCOPhlAn_201901)</code></li>
+                <li><em>“Cached database with clade-specific marker genes”</em>: <code class="language-plaintext highlighter-rouge">MetaPhlAn clade-specific marker genes (mpa_v30_CHOCOPhlAn_201901)</code></li>
               </ul>
             </li>
           </ul>
@@ -1257,7 +1502,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 <p>This step may take a couple of minutes as each sequence is compare to the full database with ~1 million reference sequences.</p>
 
-<p>5 files and a collection are generated by <strong>MetaPhlAn2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>:</p>
+<p>5 files and a collection are generated by <strong>MetaPhlAn</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>:</p>
 
 <ul>
   <li>
@@ -1376,7 +1621,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 </blockquote>
 
-<p><strong>Krona</strong> <a class="citation" href="#ondov2011interactive">Ondov <i>et al.</i> 2011</a> renders results of a metagenomic profiling as a zoomable pie chart. It allows hierarchical data, here taxonomic levels, to be explored with zooming, multi-layered pie charts</p>
+<p><strong>Krona</strong> <span class="citation"><a href="#ondov2011interactive">Ondov <i>et al.</i> 2011</a></span> renders results of a metagenomic profiling as a zoomable pie chart. It allows hierarchical data, here taxonomic levels, to be explored with zooming, multi-layered pie charts</p>
 
 <blockquote class="question">
   <h3 id="question-questions-8"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -1450,9 +1695,9 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 
 <p>We would now like to answer the question “What are the micro-organisms doing?” or “Which functions are performed by the micro-organisms in the environment?”.</p>
 
-<p>In the metatranscriptomics data, we have access to the genes that are expressed by the community. We can use that to identify genes, their functions, and build pathways, etc., to investigate their contribution to the community using <strong>HUMAnN</strong> (<a class="citation" href="#franzosa2018species">Franzosa <i>et al.</i> 2018</a>). <strong>HUMAnN</strong> is a pipeline developed for efficiently and accurately profiling the presence/absence and abundance of microbial pathways in a community from metagenomic or metatranscriptomic sequencing data.</p>
+<p>In the metatranscriptomics data, we have access to the genes that are expressed by the community. We can use that to identify genes, their functions, and build pathways, etc., to investigate their contribution to the community using <strong>HUMAnN</strong> (<span class="citation"><a href="#franzosa2018species">Franzosa <i>et al.</i> 2018</a></span>). <strong>HUMAnN</strong> is a pipeline developed for efficiently and accurately profiling the presence/absence and abundance of microbial pathways in a community from metagenomic or metatranscriptomic sequencing data.</p>
 
-<p>To identify the functions made by the community, we do not need the r<span class="notranslate">RNA</span> sequences, specially because they had noise and will slow the run. We will then use the output of <strong>SortMe<span class="notranslate">RNA</span></strong>, but also the identified community profile from <strong>MetaPhlAn</strong>. This will help <strong>HUMAnN</strong> to focus on the know sequences for the identified organisms.</p>
+<p>To identify the functions made by the community, we do not need the r<span class="notranslate">RNA</span> sequences, specially because they had noise and will slow the run. We will then use the output of <strong>SortMe<span class="notranslate">RNA</span></strong>, but also the identified community profile from <strong>MetaPhlAn</strong>. This will help <strong>HUMAnN</strong> to focus on the known sequences for the identified organisms.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extract-the-functional-information"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extract the functional information</h3>
@@ -1629,7 +1874,7 @@ https://zenodo.org/record/4776250/files/T1A_HUMAnN_Pathways_and_their_abundance.
 
   <p>The best approach would be to combine the metatranscriptomic analysis with a metagenomic analysis. In this case, rather than running <strong>MetaPhlAn</strong> on the metatranscriptomic data, we run it on the metagenomic data and use the taxonomic profile as input to <strong>HUMAnN</strong>. <span class="notranslate">RNA</span> <span class="notranslate">reads</span> are then mapped to any species’ pangenomes detected in the metagenome. Then we run <strong>HUMAnN</strong> on both metagenomics and metatranscriptomic data. We can use both outputs to normalize the <span class="notranslate">RNA</span>-level outputs (e.g. transcript family abundance) by corresponding <span class="notranslate">DNA</span>-level outputs to the quantification of microbial <span class="notranslate">expression</span> independent of gene copy number.</p>
 
-  <p>Here we do not have a metagenomic dataset to combine with and need to be careful in our interpretation</p>
+  <p>Here we do not have a metagenomic dataset to combine with and need to be careful in our interpretation.</p>
 
 </blockquote>
 
@@ -1666,7 +1911,7 @@ https://zenodo.org/record/4776250/files/T1A_HUMAnN_Pathways_and_their_abundance.
   <blockquote class="solution">
     <h3 id="solution-solution-11"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
     <ol>
-      <li>14% (<code class="language-plaintext highlighter-rouge">0.14438 x 100</code>) of the sequences have not be assigned to a gene family</li>
+      <li>14% (<code class="language-plaintext highlighter-rouge">0.14438 x 100</code>) of the sequences have not be assigned to a gene family.</li>
       <li>The UniRef90_A3DCI4 family represents 6% of the <span class="notranslate">reads</span>.</li>
     </ol>
   </blockquote>
@@ -1767,7 +2012,7 @@ PWY-6609|g__Hungateiclostridium.s__Hungateiclostridium_thermocellum|UniRef90_A3D
 
 <h2 id="group-gene-families-into-go-terms">Group gene families into GO terms</h2>
 
-<p>The gene families can be a long list of ids and going through the gene families one by one to identify the interesting ones can be cumbersome. To help constuct a big picture, we could identify and use categories of genes using the gene families.</p>
+<p>The gene families can be a long list of ids and going through the gene families one by one to identify the interesting ones can be cumbersome. To help construct a big picture, we could identify and use categories of genes using the gene families.</p>
 
 <p><a href="http://www.geneontology.org/">Gene Ontology (GO)</a> analysis is widely used to reduce complexity and highlight biological processes in genome-wide <span class="notranslate">expression</span> studies. There is a dedicated tool which groups and converts UniRef50 gene family abundances generated with <strong>HUMAnN</strong> into GO terms.</p>
 
@@ -1867,7 +2112,7 @@ GO:0000015|g__Hungateiclostridium.s__Hungateiclostridium_thermocellum	239.568
   <p><strong>Inspect</strong> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> the 3 outputs of these steps</p>
 
   <ol>
-    <li>How many GO terms have been identified</li>
+    <li>How many GO terms have been identified?</li>
     <li>Which of the GO terms related to molecular functions is the most abundant?</li>
   </ol>
 
@@ -1921,9 +2166,9 @@ GO:0046872: [MF] metal ion binding	31068.144
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bebatut/combine_metaphlan2_humann2/combine_metaphlan2_humann2/0.1.0" title="Tested with toolshed.g2.bx.psu.edu/repos/bebatut/combine_metaphlan2_humann2/combine_metaphlan2_humann2/0.1.0"><strong>Combine MetaPhlAn2 and HUMAnN2 outputs</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bebatut/combine_metaphlan2_humann2/combine_metaphlan2_humann2/0.1.0</span></span>   with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file corresponding to MetaPhlAN2 output”</em>: <code class="language-plaintext highlighter-rouge">Cut predicted taxon relative abundances table</code></li>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file corresponding HUMAnN2 output”</em>: <code class="language-plaintext highlighter-rouge">Normalized gene families</code></li>
-        <li><em>“Type of characteristics in HUMAnN2 file”</em>: <code class="language-plaintext highlighter-rouge">Gene families</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file corresponding to MetaPhlAN output”</em>: <code class="language-plaintext highlighter-rouge">Cut predicted taxon relative abundances table</code></li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file corresponding HUMAnN output”</em>: <code class="language-plaintext highlighter-rouge">Normalized gene families</code></li>
+        <li><em>“Type of characteristics in HUMAnN file”</em>: <code class="language-plaintext highlighter-rouge">Gene families</code></li>
       </ul>
     </li>
     <li>Inspect the generated file</li>
@@ -2054,156 +2299,134 @@ Hungateiclostridium	94.67418	Hungateiclostridium_thermocellum	94.67418	UniRef90_
 
 <p><img src="../../images/asaim-wf.png" alt="ASaiM diagram" /></p>
 
-<p>The dataset used here was extracted from a time-series analysis of a microbial community inside a bioreactor (<a class="citation" href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a>) in which there are 3 replicates over 7 time points. We analyzed here only one single time point for one replicate.</p>
+<p>The dataset used here was extracted from a time-series analysis of a microbial community inside a bioreactor (<span class="citation"><a href="#kunath2018proteins">Kunath <i>et al.</i> 2018</a></span>) in which there are 3 replicates over 7 time points. We analyzed here only one single time point for one replicate.</p>
 
 
 
-                    
-                    <blockquote class="key_points">
-                        <h3><i class="fas fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
-                        <ul>
-                            
-                            <li><p>Metatranscriptomics data have the same QC profile that RNA-seq data</p>
+                
+                <blockquote class="key_points">
+                    <h3><i class="fas fa-key" aria-hidden="true"></i> Key points</h3>
+                    <ul>
+                        
+                        <li><p>Metatranscriptomics data have the same QC profile that RNA-seq data</p>
 </li>
-                            
-                            <li><p>A lot of metatranscriptomics sequences are identified as rRNA sequences</p>
+                        
+                        <li><p>A lot of metatranscriptomics sequences are identified as rRNA sequences</p>
 </li>
-                            
-                            <li><p>With shotgun data, we can extract information about the studied community structure and also the functions realised by the community</p>
+                        
+                        <li><p>With shotgun data, we can extract information about the studied community structure and also the functions realised by the community</p>
 </li>
-                            
-                            <li><p>Metatranscriptomics data analyses are complex and must be careful done, specially when they are done without combination to metagenomics data analyses</p>
+                        
+                        <li><p>Metatranscriptomics data analyses are complex and must be careful done, specially when they are done without combination to metagenomics data analyses</p>
 </li>
-                            
-                        </ul>
-                    </blockquote>
-                    
+                        
+                    </ul>
+                </blockquote>
+                
 
-                    <h1>Frequently Asked Questions</h1>
-                    Have questions about this tutorial? Check out the  <a href="/training-material/topics/metagenomics/faqs/">FAQ page for the Metagenomics topic</a> to see if your question is listed there.
-                    If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                    <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                <h1>Frequently Asked Questions</h1>
+                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/metagenomics/faqs/">FAQ page for the Metagenomics topic</a> to see if your question is listed there.
+                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
+                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
 
-                    
-                    <h1 data-toc-skip>Useful literature</h1>
-                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/training-material/topics/metagenomics#references">here</a>.</p>
-                    
+                
 
-                    
-                    <h1 id="bibliography">References</h1>
-                    <ol class="bibliography"><li><span id="martin2011cutadapt">Martin, M., 2011 <b>Cutadapt removes adapter sequences from high-throughput sequencing reads</b>. EMBnet. journal 17: 10–12.</span>
-    
-    
-    
+                
+                <h1 data-toc-skip>Useful literature</h1>
+                <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/training-material/topics/metagenomics#references">here</a>.</p>
+                
 
-</li>
-<li><span id="ondov2011interactive">Ondov, B. D., N. H. Bergman, and A. M. Phillippy, 2011 <b>Interactive metagenomic visualization in a Web browser</b>. BMC bioinformatics 12: 385.</span>
-    
-    
-    
 
-</li>
-<li><span id="kopylova2012sortmerna">Kopylova, E., L. Noé, and H. Touzet, 2012 <b>SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data</b>. Bioinformatics 28: 3211–3217.</span>
-    
-    
-    
+                
+                <h1 id="bibliography">References</h1>
+                <ol class="bibliography"><li id="martin2011cutadapt">Martin, M., 2011 <b>Cutadapt removes adapter sequences from high-throughput sequencing reads</b>. EMBnet. journal 17: 10–12.</li>
+<li id="ondov2011interactive">Ondov, B. D., N. H. Bergman, and A. M. Phillippy, 2011 <b>Interactive metagenomic visualization in a Web browser</b>. BMC bioinformatics 12: 385.</li>
+<li id="kopylova2012sortmerna">Kopylova, E., L. Noé, and H. Touzet, 2012 <b>SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data</b>. Bioinformatics 28: 3211–3217.</li>
+<li id="truong2015metaphlan2">Truong, D. T., E. A. Franzosa, T. L. Tickle, M. Scholz, G. Weingart <i>et al.</i>, 2015 <b>MetaPhlAn2 for enhanced metagenomic taxonomic profiling</b>. Nature methods 12: 902.</li>
+<li id="batut2018asaim">Batut, B., K. Gravouil, C. Defois, S. Hiltemann, J.-F. Brugère <i>et al.</i>, 2018 <b>ASaiM: a Galaxy-based framework to analyze microbiota data</b>. GigaScience 7: giy057.</li>
+<li id="franzosa2018species">Franzosa, E. A., L. J. McIver, G. Rahnavard, L. R. Thompson, M. Schirmer <i>et al.</i>, 2018 <b>Species-level functional profiling of metagenomes and metatranscriptomes</b>. Nature methods 15: 962.</li>
+<li id="kunath2018proteins">Kunath, B. J., F. Delogu, A. E. Naas, M. Ø. Arntzen, V. G. H. Eijsink <i>et al.</i>, 2018 <b>From proteins to polysaccharides: lifestyle and genetic evolution of Coprothermobacter proteolyticus</b>. The ISME journal 1.</li></ol>
+                
 
-</li>
-<li><span id="batut2018asaim">Batut, B., K. Gravouil, C. Defois, S. Hiltemann, J.-F. Brugère <i>et al.</i>, 2018 <b>ASaiM: a Galaxy-based framework to analyze microbiota data</b>. GigaScience 7: giy057.</span>
-    
-    
-    
+                
 
-</li>
-<li><span id="franzosa2018species">Franzosa, E. A., L. J. McIver, G. Rahnavard, L. R. Thompson, M. Schirmer <i>et al.</i>, 2018 <b>Species-level functional profiling of metagenomes and metatranscriptomes</b>. Nature methods 15: 962.</span>
-    
-    
-    
+                <h1>Feedback</h1>
+                <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452">how it went</a>.
+                <br>Did you use this material as a learner or student? Click the form below to leave feedback.<i class="fas fa-hand-point-down"></i>
+                </p>
 
-</li>
-<li><span id="kunath2018proteins">Kunath, B. J., F. Delogu, A. E. Naas, M. Ø. Arntzen, V. G. H. Eijsink <i>et al.</i>, 2018 <b>From proteins to polysaccharides: lifestyle and genetic evolution of Coprothermobacter proteolyticus</b>. The ISME journal 1.</span>
-    
-    
-    
-
-</li></ol>
-                    
-
-                    <h1>Feedback</h1>
-                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-
-                    <div id="feedback-button">
-                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
-                    </div>
-                    <div id="feedback-form">
-                    </div>
-                    <script type="text/javascript">
-                        (function (window, document) {
-                            function onDocumentReady(fn) {
-                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-                                    fn();
-                                } else {
-                                    document.addEventListener('DOMContentLoaded', fn);
-                                }
+                <div id="feedback-button">
+                    <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                </div>
+                <div id="feedback-form">
+                </div>
+                <script type="text/javascript">
+                    (function (window, document) {
+                        function onDocumentReady(fn) {
+                            if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                fn();
+                            } else {
+                                document.addEventListener('DOMContentLoaded', fn);
                             }
+                        }
 
-                            onDocumentReady(function () {
-                                $("#feedback-button").click(function(evt){
-                                    var e = $(evt.target)
-                                    e.hide();
+                        onDocumentReady(function () {
+                            $("#feedback-button").click(function(evt){
+                                var e = $(evt.target)
+                                e.hide();
 
-                                    $("#feedback-form").html(`
-                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Metatranscriptomics analysis using microbiome RNA-seq data (Metagenomics)">Loading...</iframe>
-                                    `)
-                                })
-                            });
-                        })(window, document);
-                    </script>
+                                $("#feedback-form").html(`
+                                    <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Metatranscriptomics analysis using microbiome RNA-seq data (Metagenomics)">Loading...</iframe>
+                                `)
+                            })
+                        });
+                    })(window, document);
+                </script>
 
-
-
-                    <h1>Citing this Tutorial</h1>
-                    <p>
-                        <ol>
-                            <li id="citation-text">Pratik Jagtap, Subina Mehta, Ray Sajulga, Bérénice Batut, Emma Leith, Praveen Kumar, Saskia Hiltemann, 2021 <b>Metatranscriptomics analysis using microbiome RNA-seq data (Galaxy Training Materials)</b>. <a href="/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html">/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html</a> Online; accessed TODAY
-                            </li>
-                            <li>
-                            Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
-                            </li>
-                        </ol>
-                    </p>
+                <h1>Citing this Tutorial</h1>
+                <p>
+                    <ol>
+                        <li id="citation-text">Pratik Jagtap, Subina Mehta, Ray Sajulga, Bérénice Batut, Emma Leith, Praveen Kumar, Saskia Hiltemann, 2021 <b>Metatranscriptomics analysis using microbiome RNA-seq data (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html">https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html</a> Online; accessed TODAY
+                        </li>
+                        <li>
+                        Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
+                        </li>
+                    </ol>
+                </p>
 
 
-                    <blockquote class="details">
-                      <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
-                      <p style="display: none;">
+                <blockquote class="details">
+                  <h3><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> BibTeX</h3>
+                  <p style="display: none;">
 
-                    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
+                <div class="highlighter-rouge"><div class="highlight"><pre class="highlight">
 <code id="citation-code">@misc{metagenomics-metatranscriptomics,
-    author = "Pratik Jagtap and Subina Mehta and Ray Sajulga and Bérénice Batut and Emma Leith and Praveen Kumar and Saskia Hiltemann",
-    title = "Metatranscriptomics analysis using microbiome RNA-seq data (Galaxy Training Materials)",
-    year = "2021",
-    month = "05",
-    day = "20"
-    url = "\url{/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html}",
-    note = "[Online; accessed TODAY]"
+author = "Pratik Jagtap and Subina Mehta and Ray Sajulga and Bérénice Batut and Emma Leith and Praveen Kumar and Saskia Hiltemann",
+title = "Metatranscriptomics analysis using microbiome RNA-seq data (Galaxy Training Materials)",
+year = "2021",
+month = "05",
+day = "20"
+url = "\url{https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/metatranscriptomics/tutorial.html}",
+note = "[Online; accessed TODAY]"
 }
 @article{Batut_2018,
-        doi = {10.1016/j.cels.2018.05.012},
-        url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
-        year = 2018,
-        month = {jun},
-        publisher = {Elsevier {BV}},
-        volume = {6},
-        number = {6},
-        pages = {752--758.e1},
-        author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
-        title = {Community-Driven Data Analysis Training for Biology},
-        journal = {Cell Systems}
+    doi = {10.1016/j.cels.2018.05.012},
+    url = {https://doi.org/10.1016%2Fj.cels.2018.05.012},
+    year = 2018,
+    month = {jun},
+    publisher = {Elsevier {BV}},
+    volume = {6},
+    number = {6},
+    pages = {752--758.e1},
+    author = {B{\'{e}}r{\'{e}}nice Batut and Saskia Hiltemann and Andrea Bagnacani and Dannon Baker and Vivek Bhardwaj and Clemens Blank and Anthony Bretaudeau and Loraine Brillet-Gu{\'{e}}guen and Martin {\v{C}}ech and John Chilton and Dave Clements and Olivia Doppelt-Azeroual and Anika Erxleben and Mallory Ann Freeberg and Simon Gladman and Youri Hoogstrate and Hans-Rudolf Hotz and Torsten Houwaart and Pratik Jagtap and Delphine Larivi{\`{e}}re and Gildas Le Corguill{\'{e}} and Thomas Manke and Fabien Mareuil and Fidel Ram{\'{\i}}rez and Devon Ryan and Florian Christoph Sigloch and Nicola Soranzo and Joachim Wolff and Pavankumar Videm and Markus Wolfien and Aisanjiang Wubuli and Dilmurat Yusuf and James Taylor and Rolf Backofen and Anton Nekrutenko and Björn Grüning},
+    title = {Community-Driven Data Analysis Training for Biology},
+    journal = {Cell Systems}
 }</code>
-                    </pre></div></div>
-                    </p>
-                    </blockquote>
+                </pre></div></div>
+                </p>
+                </blockquote>
+
+                
 
 
 <script type="text/javascript">
@@ -2213,36 +2436,22 @@ document.getElementById("citation-code").innerHTML = document.getElementById("ci
 document.getElementById("citation-text").innerHTML = document.getElementById("citation-text").innerHTML.replace("TODAY", d.toDateString());
 </script>
 
-                </div>
+                <h3><i class="far fa-thumbs-up" aria-hidden="true"></i> Congratulations on successfully completing this tutorial!</h3>
+
+                
+
+                
+
             </div>
         </div>
-
-        <h3><i class="far fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
-
-        
-
-        
-    </section>
-</div>
-
-
-<footer>
-    <div class="container">
-        <p>
-            This material is the result of a collaborative work. Thanks to the
-            <a href="https://wiki.galaxyproject.org/Teach/GTN">Galaxy Training Network</a>
-            and all the <a href="/training-material/hall-of-fame">contributors</a> (Pratik Jagtap, Subina Mehta, Ray Sajulga, Bérénice Batut, Emma Leith, Praveen Kumar, Saskia Hiltemann)!
-        </p>
-        <p>
-            Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/galaxyproject/training-material/tree/main/topics/metagenomics/tutorials/metatranscriptomics/tutorial.md">GitHub</a>.
-        </p>
-        <p>
-    The content of the tutorials and website is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-</p>
     </div>
-</footer>
+</section>
+<br/>
+<br/>
+<br/>
 
+        </div>
+        
     </body>
     <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>

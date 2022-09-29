@@ -16,6 +16,13 @@
 				"topic": "Introduction to Galaxy Analyses",
 				"title": "A short introduction to Galaxy"
 			},
+								
+			{
+				"id": "introduction/tutorials/galaxy-intro-short/slides_ES",
+				"topic": "Introduction to Galaxy Analyses",
+				"title": "A short introduction to Galaxy"
+			},
+								
                                
                        
                                
@@ -32,6 +39,15 @@
                        
                                
                        
+                               
+                       
+                               
+			{
+				"id": "introduction/tutorials/options-for-using-galaxy/slides",
+				"topic": "Introduction to Galaxy Analyses",
+				"title": "Options for using Galaxy"
+			},
+								
                                
                        
                                
@@ -51,6 +67,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Ansible"
 			},
+								
                                
                        
                                
@@ -61,6 +78,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Connecting Galaxy to a compute cluster"
 			},
+								
                                
                        
                                
@@ -69,6 +87,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Controlling Galaxy with systemd or Supervisor"
 			},
+								
                                
                        
                                
@@ -77,6 +96,13 @@
 				"topic": "Galaxy Server administration",
 				"title": "Data Libraries"
 			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
                                
                        
                                
@@ -95,6 +121,9 @@
 				"topic": "Galaxy Server administration",
 				"title": "Galactic Database"
 			},
+								
+                               
+                       
                                
                        
                                
@@ -107,6 +136,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Galaxy Installation with Ansible"
 			},
+								
                                
                        
                                
@@ -115,6 +145,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Galaxy Interactive Tools"
 			},
+								
                                
                        
                                
@@ -125,6 +156,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Galaxy Monitoring with gxadmin"
 			},
+								
                                
                        
                                
@@ -135,6 +167,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Galaxy Monitoring with Telegraf and Grafana"
 			},
+								
                                
                        
                                
@@ -149,6 +182,9 @@
 				"topic": "Galaxy Server administration",
 				"title": "Gearing towards production"
 			},
+								
+                               
+                       
                                
                        
                                
@@ -163,6 +199,7 @@
 				"topic": "Galaxy Server administration",
 				"title": "Reference Data with CVMFS"
 			},
+								
                                
                        
                                
@@ -177,6 +214,9 @@
 				"topic": "Galaxy Server administration",
 				"title": "Server Maintenance and Backups"
 			},
+								
+                               
+                       
                                
                        
                                
@@ -189,8 +229,9 @@
 			{
 				"id": "admin/tutorials/users-groups-quotas/slides",
 				"topic": "Galaxy Server administration",
-				"title": "User, Group and Quota managment"
+				"title": "User, Role, Group and Quota managment"
 			},
+								
                                
                        
                                
@@ -217,6 +258,21 @@
                                
                        
                                
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
                        
                
 					
@@ -229,6 +285,7 @@
 				"topic": "Climate",
 				"title": "Introduction to climate data"
 			},
+								
                                
                        
                                
@@ -237,6 +294,46 @@
 				"topic": "Climate",
 				"title": "Functionally Assembled Terrestrial Ecosystem Simulator (FATES)"
 			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+			{
+				"id": "climate/tutorials/pangeo/slides",
+				"topic": "Climate",
+				"title": "Pangeo ecosystem 101 for everyone - Introduction to Xarray Galaxy Tools"
+			},
+								
+                               
+                       
+                               
+			{
+				"id": "climate/tutorials/pangeo-notebook/slides",
+				"topic": "Climate",
+				"title": "Pangeo Notebook in Galaxy - Introduction to Xarray"
+			},
+								
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                                
                        
                                
@@ -262,6 +359,65 @@
                        
                                
                        
+                               
+                       
+                               
+                       
+                               
+			{
+				"id": "contributing/tutorials/create-new-tutorial-slides/slides",
+				"topic": "Contributing to the Galaxy Training Material",
+				"title": "Creating Slides"
+			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+                               
+			{
+				"id": "data-management/tutorials/0013_file-naming/slides",
+				"topic": "RDMBites Data Management",
+				"title": "How to Name Files"
+			},
+								
+                               
+                       
+                               
+			{
+				"id": "data-management/tutorials/0114_data-stewardship/slides",
+				"topic": "RDMBites Data Management",
+				"title": "What is Data Stewardship?"
+			},
+								
+                               
+                       
                
 					
                        
@@ -291,15 +447,54 @@
                        
                                
                        
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                
 					
                        
                        
                        
-               
-					
+                               
                        
+                               
                        
+                               
+                       
+                               
                        
                                
                        
@@ -327,6 +522,7 @@
 				"topic": "Development in Galaxy",
 				"title": "Scripting Galaxy using the API and BioBlend"
 			},
+								
                                
                        
                                
@@ -345,12 +541,19 @@
 				"topic": "Development in Galaxy",
 				"title": "ToolFactory: Generating Tools From Simple Scripts"
 			},
+								
+                               
+                       
                                
                        
                
 					
                        
                        
+                       
+                               
+                       
+                               
                        
                                
                        
@@ -379,6 +582,7 @@
 				"topic": "Epigenetics",
 				"title": "ATAC-Seq data analysis"
 			},
+								
                                
                        
                                
@@ -390,6 +594,22 @@
                                
                        
                                
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
                        
                
 					
@@ -432,10 +652,35 @@
                        
                                
                        
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                
 					
                        
                        
+                       
+                               
+                       
+                               
+                       
+                               
+			{
+				"id": "genome-annotation/tutorials/crispr-screen/slides",
+				"topic": "Genome Annotation",
+				"title": "CRISPR screen analysis"
+			},
+								
+                               
+                       
+                               
+                       
+                               
                        
                                
                        
@@ -453,6 +698,22 @@
 				"topic": "Genome Annotation",
 				"title": "Genome annotation with Prokka"
 			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+			{
+				"id": "genome-annotation/tutorials/apollo/slides",
+				"topic": "Genome Annotation",
+				"title": "Refining Genome Annotations with Apollo (prokaryotes)"
+			},
+								
                                
                        
                
@@ -478,6 +739,13 @@
                        
                        
                        
+               
+					
+                       
+                       
+                       
+                               
+                       
                                
                        
                                
@@ -496,19 +764,6 @@
                        
                        
                                
-                       
-                               
-                       
-                               
-                       
-                               
-                       
-                               
-                       
-               
-					
-                       
-                       
                        
                                
                        
@@ -537,6 +792,17 @@
 				"topic": "Proteomics",
 				"title": "Introduction to proteomics, protein identification, quantification and statistical modelling"
 			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                                
                        
                                
@@ -586,6 +852,98 @@
                        
                        
                        
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
                                
                        
                                
@@ -607,6 +965,13 @@
                        
                                
                        
+                               
+			{
+				"id": "teaching/tutorials/gtn-for-instructors/slides",
+				"topic": "Teaching and Hosting Galaxy training",
+				"title": "Overview of the Galaxy Training Material for Instructors"
+			},
+								
                                
                        
                                
@@ -642,6 +1007,21 @@
 				"topic": "Transcriptomics",
 				"title": "An introduction to scRNA-seq data analysis"
 			},
+								
+			{
+				"id": "transcriptomics/tutorials/scrna-intro/slides_ES",
+				"topic": "Transcriptomics",
+				"title": "An introduction to scRNA-seq data analysis"
+			},
+								
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                                
                        
                                
@@ -670,6 +1050,9 @@
 				"topic": "Transcriptomics",
 				"title": "Plates, Batches, and Barcodes"
 			},
+								
+                               
+                       
                                
                        
                                
@@ -704,6 +1087,7 @@
 				"topic": "Transcriptomics",
 				"title": "Whole transcriptome analysis of Arabidopsis thaliana"
 			},
+								
                                
                        
                
@@ -728,6 +1112,17 @@
                                
                        
                                
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
                        
                
 					

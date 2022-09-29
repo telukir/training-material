@@ -9,6 +9,8 @@
 
 
 
+
+
   <head>
     <meta charset="utf-8">
     <title>An Introduction to Genome Assembly</title>
@@ -29,33 +31,23 @@
     <meta property="og:title" content="Galaxy Training: An Introduction to Genome Assembly" />
     <meta property="og:description" content="DNA sequence data has become an indispensable tool for Mo..." />
     <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
+    <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/assembly/tutorials/general-introduction/slides.html" />
+
     <script type="application/ld+json">
       
 
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -68,16 +60,13 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "dateModified": "1970-01-01 00:00:26 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "An Introduction to Genome Assembly",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "isFamilyFriendly": true,
+  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -96,22 +85,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Assembly",
     "description": "DNA sequence data has become an indispensable tool for Molecular Biology & Evolutionary Biology. Study in these fields now require a genome sequence to work from. We call this a 'Reference Sequence.' We need to build a reference for each species. We do this by Genome Assembly. De novo Genome Assembly is the process of reconstructing the original DNA sequence from the fragment reads alone.",
-    "url": "https://training.galaxyproject.org//training-material/topics/assembly/"
+    "url": "https://training.galaxyproject.org/training-material/topics/assembly/"
   },
-  "courseCode": "assembly / general-introduction / slides",
   "learningResourceType": "slides",
   "name": "Slides for 'An Introduction to Genome Assembly' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/assembly/tutorials/general-introduction/slides.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/assembly/tutorials/general-introduction/slides.html",
   "timeRequired": "PT30M",
+  "keywords": "assembly",
   "description": "The questions this  addresses are:\n - How do we perform a very basic genome assembly from short read data?\n\n\\nThe objectives are:\n - assemble some paired end reads using Velvet\n - examine the output of the assembly.\n\n",
-  "coursePrerequisites": [
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -122,8 +135,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
       "name": "Quality Control",
       "description": "Slides for 'Quality Control' tutorial",
       "learningResourceType": "slides",
@@ -136,8 +150,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
       "name": "Quality Control",
       "description": "Hands-on for 'Quality Control' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -150,19 +165,50 @@
       }
     }
   ],
-  "hasPart": [
-
-  ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Simon Gladman"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/",
+      "name": "Simon Gladman",
+      "image": "https://avatars.githubusercontent.com/slugger70",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Simon Gladman"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/slugger70/",
+      "name": "Simon Gladman",
+      "image": "https://avatars.githubusercontent.com/slugger70",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     }
   ],
   "about": [
@@ -170,7 +216,7 @@
       "@type": "CreativeWork",
       "name": "Assembly",
       "description": "DNA sequence data has become an indispensable tool for Molecular Biology & Evolutionary Biology. Study in these fields now require a genome sequence to work from. We call this a 'Reference Sequence.' We need to build a reference for each species. We do this by Genome Assembly. De novo Genome Assembly is the process of reconstructing the original DNA sequence from the fragment reads alone.",
-      "url": "https://training.galaxyproject.org//training-material/topics/assembly/"
+      "url": "https://training.galaxyproject.org/training-material/topics/assembly/"
     }
   ]
 }
@@ -199,20 +245,40 @@ class: center, middle, inverse
 ---
 
 
+
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
 
 
 # An Introduction to Genome Assembly
 
+<div markdown="0">
 
-<div class="contributors-line">
+	<div class="contributors-line">
+		Authors: 
+<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="https://avatars.githubusercontent.com/slugger70?s=27" alt="Avatar">Simon Gladman</a>
 
 
- <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
 
+	</div>
 
 </div>
 
+
+<div class="footnote" style="bottom: 4 em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jul 26, 2021</div>
+
+<div class="footnote" style="bottom: 2.5em;"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a></div>
+<div class="footnote" style="bottom: 1em;"><strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes</div>
+
+???
+Presenter notes contain extra information which might be useful if you intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other.
+
+Useful when presenting.
 
 
 
@@ -246,19 +312,8 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 
 
-.footnote[Tip: press `P` to view the presenter notes]
-
-???
-Presenter notes contain extra information which might be useful if you
-intend to use these slides for teaching.
-
-Press `P` again to switch presenter notes off
-
-Press `C` to create a new window where the same presentation will be displayed.
-This window is linked to the main window. Changing slides on one will cause the
-slide to change on the other. Useful when presenting.
-
 ---
+
 
 
 
@@ -312,13 +367,13 @@ slide to change on the other. Useful when presenting.
 
 ]
 
-.pull-right[ ![](../../images/Humpty.jpg) ]
+.pull-right[ ![Graphic of a shattered, human-like egg sitting on a wall, dressed in a suit. Several men stand around him attempting to piece back together shattered fragments of the egg.](../../images/Humpty.jpg) ]
 
 ---
 
 # **Another View**
 
-![](../../images/newspaper.png)
+![A stack of newspapers is labelled genomic DNA. A line labelled points an image of a room full of shredded paper and people inside, labelled reads. Then the line continues to a pile of newspaper clippings reading draft genome sequence, and finally to closed genome sequence with a cartoon of a newspaper.](../../images/newspaper.png)
 
 ---
 
@@ -328,25 +383,25 @@ slide to change on the other. Useful when presenting.
 
 # **A small &quot;genome&quot;**
 
-![](../../images/shakespear1.png)
+![The text &quot;Friends, romans, countrymen, lend me your ears;&quot;. A small drawing of Shakespeare has a speech bubble reading &quot;I'll return them tomorrow&quot;](../../images/shakespear1.png)
 
 ---
 
 # **Shakespearomics**
 
-![](../../images/shakespear2.png)
+![A set of reads is shown, with various subsets of the sentence like &quot;ds, romans, count&quot; and &quot;friends, rom&quot; and &quot;crymen, lend me&quot;. The c in crymen is highlighted yellow, as it should be trymen (from countrymen.) The drawing of Shakespeare now says &quot;Oops! I dropped them.&quot;](../../images/shakespear2.png)
 
 ---
 
 # **Shakespearomics**
 
-![](../../images/shakespear3.png)
+![The reads are shown again, now with overlaps below, reconstructing the sentence from the fragments. Shakespeare says I'm good with words. Crymen and &quot;send me your ears&quot; have their first letters highlighted in yellow due to their typos.](../../images/shakespear3.png)
 
 ---
 
 # **Shakespearomics**
 
-![](../../images/shakespear4.png)
+![Finally a &quot;majority consensus&quot; is shown below the overlaps, in two other reads we saw count and countrymen, in addition to our crymen. So that makes 2/3 that have the correct text, and we go with the majority. The same is done for the other typo. Shakespeare says We have a consensus!](../../images/shakespear4.png)
 
 ---
 
@@ -356,7 +411,7 @@ slide to change on the other. Useful when presenting.
 
 # **The Awful Truth**
 
-![](../../images/notsimply.png)
+![A meme image showing boromir from lord of the rings. The text reads: one does not simply assemble a genome.](../../images/notsimply.png)
 
 ## &quot;Genome assembly is impossible.&quot; - A/Prof. Mihai Pop
 
@@ -377,7 +432,7 @@ slide to change on the other. Useful when presenting.
   * Lots of errors in reads
 ]
 
-.pull-right[ ![](../../images/worlds_hardest.png) ]
+.pull-right[ ![A picture of a jigsaw puzzle titled &quot;The world's most difficult&quot; and showing a field of small round candies. It boasts the same artwork on both sides.](../../images/worlds_hardest.png) ]
 
 ---
 
@@ -394,17 +449,17 @@ slide to change on the other. Useful when presenting.
 
 ---
 
-![](../../images/olc_pic.png)
+![Reads are provided to the algorithm, they are in the colours of the rainbow. Next overlaps are identified and the rainbow resolves itself. A subset of that is highlighted and points to reads connected by overlaps with many arrows going between the bluegreen fragments that are highlighted. This goes to the hamiltonian path identified with a re-run arrow between, indicating some mount of backtracking needed to find the best path. Finally the hamiltonian produces a consensus sequence with the correct final ordering.](../../images/olc_pic.png)
 
 ---
 
 # **A more realistic graph**
 
-![](../../images/real_graph.png)
+![A graph showing maybe 500 nodes connected with messy lines, it is intentionally impossible to read and a mess to highlight the scope of the problem.](../../images/real_graph.png)
 
 ---
 
-# .image-15[![](../../images/nofun.png)] **What ruins the graph?**
+# .image-15[![fun with a strike through it.](../../images/nofun.png)] **What ruins the graph?**
 
 * Read errors
   * Introduces false edges and nodes
@@ -438,7 +493,7 @@ slide to change on the other. Useful when presenting.
 
 .pull-right[
 
-![](../../images/triplets.png)
+![Three human children wearing similar shirts. One reads I was planned, one I was not, and the third Me neither.](../../images/triplets.png)
 
 ]
 
@@ -446,11 +501,11 @@ slide to change on the other. Useful when presenting.
 
 # **Effect on Assembly**
 
-![](../../images/repeat_effect.png)
+![A genome with a repeat in two distinct locations is shown. Arrows point to the repeats being collapsed, and then the in-between bits being cut out of the sequence completely.](../../images/repeat_effect.png)
 
 ---
 .enlarge120[
-# **The law of repeats** .image-15[![](../../images/repeatafterme.png)]
+# **The law of repeats** .image-15[![A picture of the ocean with text reading repeat after me.](../../images/repeatafterme.png)]
 ]
 
 ## **It is impossible to resolve repeats of length S unless you have reads longer than S**
@@ -521,7 +576,7 @@ sequence both ends of the same fragment
 
 .enlarge120[# **Contigs to Scaffolds**]
 
-![](../../images/scaffolding.png)
+![A scaffold with gaps as yellow boxes is shown. Above is a set of contigs and paired-end reads shown bridging the gaps.](../../images/scaffolding.png)
 
 ---
 
@@ -637,25 +692,32 @@ sequence both ends of the same fragment
 
 ---
 
-## Thank you!
+## Thank You!
 
-This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://training.galaxyproject.org) and all the contributors!
+
+<div markdown="0">
+
+	<div class="contributors-line">
+		Authors: 
+<a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="https://avatars.githubusercontent.com/slugger70?s=27" alt="Avatar">Simon Gladman</a>
 
 
-<div class="contributors-line">
 
-
- <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
-
+	</div>
 
 </div>
 
 
+<div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
 
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
-This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</div>
+
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+This material is licensed under the Creative Commons Attribution 4.0 International License</a>.
 
 
     </textarea>
@@ -663,7 +725,7 @@ This material is licensed under the <a rel="license" href="https://creativecommo
     <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
     <script type="text/javascript">
-      var slideshow = remark.create({navigation: {scroll: false,}});
+      var slideshow = remark.create({navigation: {scroll: false}, ratio: '16:9'});
       var hljs = remark.highlighter.engine;
       var snippets = document.querySelectorAll('code.remark-code');
         [].forEach.call(snippets,function(snippet){

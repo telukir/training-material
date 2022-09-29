@@ -9,6 +9,8 @@
 
 
 
+
+
   <head>
     <meta charset="utf-8">
     <title>ChIP-seq data analysis</title>
@@ -29,33 +31,23 @@
     <meta property="og:title" content="Galaxy Training: ChIP-seq data analysis" />
     <meta property="og:description" content="DNA methylation is an epigenetic mechanism used by higher..." />
     <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png" />
+
+    <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/slides.html" />
+
     <script type="application/ld+json">
       
 
 
 {
   "@context": "http://schema.org",
-  "@type": "Course",
-  "accessMode": [
-    "textual",
-    "visual"
-  ],
-  "accessModeSufficient": [
-    "textual",
-    "visual"
-  ],
-  "accessibilityControl": [
-    "fullKeyboardControl",
-    "fullMouseControl"
-  ],
-  "accessibilityFeature": [
-    "alternativeText",
-    "tableOfContents"
-  ],
-  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "@type": "LearningResource",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "audience": {
     "@type": "EducationalAudience",
-    "educationalRole": "students"
+    "educationalRole": "Students"
   },
   "citation": {
     "@type": "CreativeWork",
@@ -68,16 +60,13 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "dateModified": "1970-01-01 00:00:26 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "ChIP-seq data analysis",
-  "inLanguage": {
-    "@type": "Language",
-    "name": "English",
-    "alternateName": "en"
-  },
   "interactivityType": "mixed",
   "isAccessibleForFree": true,
-  "license": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md",
+  "isFamilyFriendly": true,
+  "license": "https://spdx.org/licenses/CC-BY-4.0.html",
   "producer": {
     "@type": "Organization",
     "email": "galaxytrainingnetwork@gmail.com",
@@ -96,22 +85,46 @@
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
+  "identifier": "https://github.com/galaxyproject/training-material",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "The text aims to be as accessible as possible. Image descriptions will vary per tutorial, from images being completely inaccessible, to images with good descriptions for non-visual users.",
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Epigenetics",
     "description": "DNA methylation is an epigenetic mechanism used by higher eukaryotes and involved in e.g. gene expression, X-Chromosome inactivating, imprinting, and gene silencing of germline specific gene and repetitive elements.",
-    "url": "https://training.galaxyproject.org//training-material/topics/epigenetics/"
+    "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/"
   },
-  "courseCode": "epigenetics / formation_of_super-structures_on_xi / slides",
   "learningResourceType": "slides",
   "name": "Slides for 'ChIP-seq data analysis' tutorial",
-  "url": "https://training.galaxyproject.org//training-material/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/slides.html",
+  "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/slides.html",
   "timeRequired": "PT15M",
+  "keywords": "epigenetics",
   "description": "The questions this  addresses are:\n - What is ChIP-seq?\n\n\\nThe objectives are:\n - Identify ChIP-seq data\n\n",
-  "coursePrerequisites": [
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "competencyRequired": [
     {
-      "@type": "CreativeWork",
-      "url": "https://training.galaxyproject.org//training-material/topics/introduction/",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/introduction/",
       "name": "Introduction to Galaxy Analyses",
       "description": "Introduction to Galaxy Analyses",
       "provider": {
@@ -122,8 +135,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/slides.html",
       "name": "Quality Control",
       "description": "Slides for 'Quality Control' tutorial",
       "learningResourceType": "slides",
@@ -136,8 +150,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html",
       "name": "Quality Control",
       "description": "Hands-on for 'Quality Control' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -150,8 +165,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/slides.html",
       "name": "Mapping",
       "description": "Slides for 'Mapping' tutorial",
       "learningResourceType": "slides",
@@ -164,8 +180,9 @@
       }
     },
     {
-      "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
+      "@context": "http://schema.org",
+      "@type": "LearningResource",
+      "url": "https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/mapping/tutorial.html",
       "name": "Mapping",
       "description": "Hands-on for 'Mapping' tutorial",
       "learningResourceType": "hands-on tutorial",
@@ -178,27 +195,96 @@
       }
     }
   ],
-  "hasPart": [
-
-  ],
   "author": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Leily Rabbani"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/",
+      "name": "Leily Rabbani",
+      "image": "https://avatars.githubusercontent.com/LeilyR",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Bérénice Batut"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "name": "Bérénice Batut",
+      "image": "https://avatars.githubusercontent.com/bebatut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9852-1987",
+      "orcid": "https://orcid.org/0000-0001-9852-1987"
     }
   ],
   "contributor": [
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Leily Rabbani"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/",
+      "name": "Leily Rabbani",
+      "image": "https://avatars.githubusercontent.com/LeilyR",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ]
     },
     {
+      "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Bérénice Batut"
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+        "@type": "Person"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/",
+      "name": "Bérénice Batut",
+      "image": "https://avatars.githubusercontent.com/bebatut",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "url": "https://galaxyproject.org/teach/gtn/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-9852-1987",
+      "orcid": "https://orcid.org/0000-0001-9852-1987"
     }
   ],
   "about": [
@@ -206,7 +292,7 @@
       "@type": "CreativeWork",
       "name": "Epigenetics",
       "description": "DNA methylation is an epigenetic mechanism used by higher eukaryotes and involved in e.g. gene expression, X-Chromosome inactivating, imprinting, and gene silencing of germline specific gene and repetitive elements.",
-      "url": "https://training.galaxyproject.org//training-material/topics/epigenetics/"
+      "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/"
     },
     {
       "@type": "DefinedTerm",
@@ -242,20 +328,44 @@ class: center, middle, inverse
 ---
 
 
+
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
 
 
 # ChIP-seq data analysis
 
+<div markdown="0">
 
-<div class="contributors-line">
+	<div class="contributors-line">
+		Authors: 
+<a href="/training-material/hall-of-fame/LeilyR/" class="contributor-badge contributor-LeilyR"><img src="https://avatars.githubusercontent.com/LeilyR?s=27" alt="Avatar">Leily Rabbani</a>
 
 
- <a href="/training-material/hall-of-fame/LeilyR/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/LeilyR" alt="Leily Rabbani">Leily Rabbani</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
 
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
+
+
+
+	</div>
 
 </div>
 
+
+<div class="footnote" style="bottom: 4 em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: Jul 26, 2021</div>
+
+<div class="footnote" style="bottom: 2.5em;"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="visually-hidden">text-document</span><a href="slides-plain.html"> Plain-text slides</a></div>
+<div class="footnote" style="bottom: 1em;"><strong>Tip: </strong>press <kbd>P</kbd> to view the presenter notes</div>
+
+???
+Presenter notes contain extra information which might be useful if you intend to use these slides for teaching.
+
+Press `P` again to switch presenter notes off
+
+Press `C` to create a new window where the same presentation will be displayed.
+This window is linked to the main window. Changing slides on one will cause the
+slide to change on the other.
+
+Useful when presenting.
 
 
 
@@ -290,19 +400,8 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 
 
-.footnote[Tip: press `P` to view the presenter notes]
-
-???
-Presenter notes contain extra information which might be useful if you
-intend to use these slides for teaching.
-
-Press `P` again to switch presenter notes off
-
-Press `C` to create a new window where the same presentation will be displayed.
-This window is linked to the main window. Changing slides on one will cause the
-slide to change on the other. Useful when presenting.
-
 ---
+
 
 
 
@@ -338,13 +437,13 @@ slide to change on the other. Useful when presenting.
     - ChIP data
     - Input data
 
-.image-75[![](../../images/formation_of_super-structures_on_xi/chipseq.png)]
+.image-75[![A complicated figure showing a set of nucleosomes at the top with the following regions appearing to be exposed to sequencing: enhancer, promoter, gene, and tss regions. several charts appear below, chromatin accessibility showing broad peaks around the enhancer, promoter, and gene. the transcription factor chart shows peaks around enhancer and promoter. A line labelled TFBS shows sequences in repressive state (the nucleosome regions), enhancer, and promoter. The PollI track shows peaks below promoter and gene. Then several organisms labelled things like H3K4me1, H3K36me3 show various peaks along the regions of repressive state, enhancer, promoter, transcribed state (the gene) and poised state (the transcription start site.).](../../images/formation_of_super-structures_on_xi/chipseq.png)]
 
 ---
 
-## Generating ChIP-seq data 
+## Generating ChIP-seq data
 
-![](../../images/formation_of_super-structures_on_xi/chipseq_generation.png)
+![A diagram illustrating the principles of Chromatin Immunoprecipitation Sequencing (ChIP-sequencing), where the location of binding by a specific protein to DNA is investigated. DNA from the nucleus is taken, and cross-linked to protein DNA. This is then sheared by sonication, and the cells are lysed. Bead-attached antibodies are added to immunoprecipitate the target protein. A large red callout says input data is NOT going through the Immunoprecipitation step. The resulting beads with bound protein are sequenced and mapped to the genome. Another bred text says millions of reads to map.](../../images/formation_of_super-structures_on_xi/chipseq_generation.png)
 
 &lt;small&gt;
 Source: [Wikipedia](https://en.wikipedia.org/wiki/ChIP-sequencing
@@ -353,13 +452,13 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/ChIP-sequencing
 
 ---
 
-## ChIP vs Input 
+## ChIP vs Input
 
-![](../../images/formation_of_super-structures_on_xi/chip_vs_input.png)
+![A cartoon of sequencing shows a line labelled genome. Input reads shown below map along the entire genome. ChIP reads map in broad peaks, along only specific regions.](../../images/formation_of_super-structures_on_xi/chip_vs_input.png)
 
 ---
 
-![](../../images/formation_of_super-structures_on_xi/chipseq_pipeline.png)
+![Graphic labelled Pipeline overview. Reads go through QC, mapping to a reference, ChIP QC, Visualisation, and Peak Calling.](../../images/formation_of_super-structures_on_xi/chipseq_pipeline.png)
 
 ---
 
@@ -367,12 +466,12 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/ChIP-sequencing
 
 SCHMD1 in known to have an effect on gene expression in X chromosome
 
-![](../../images/formation_of_super-structures_on_xi/SCHMD1.png)
+![12 different sets of line graphs are shown showing various peaks along the genome. Genes are shown below the genome, some, but not all, lining up with the peaks. Below is a graphic of two line charts comparing two genomes. One has a region with no reads mapping which is circled.](../../images/formation_of_super-structures_on_xi/SCHMD1.png)
 
 Chen-Yu Wang et al. 2018; Vivek Bhardwaj, Steffen Heyne et al. 2018
 
 ???
-We probe a potential architectural role for SMCHD1 and investigate the mechanism by which it shapes the Xi and represses gene expression 
+We probe a potential architectural role for SMCHD1 and investigate the mechanism by which it shapes the Xi and represses gene expression
 
 
 
@@ -392,25 +491,36 @@ We probe a potential architectural role for SMCHD1 and investigate the mechanism
 
 ---
 
-## Thank you!
+## Thank You!
 
-This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://training.galaxyproject.org) and all the contributors!
+
+<div markdown="0">
+
+	<div class="contributors-line">
+		Authors: 
+<a href="/training-material/hall-of-fame/LeilyR/" class="contributor-badge contributor-LeilyR"><img src="https://avatars.githubusercontent.com/LeilyR?s=27" alt="Avatar">Leily Rabbani</a>
 
 
-<div class="contributors-line">
+
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a>
 
 
- <a href="/training-material/hall-of-fame/LeilyR/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/LeilyR" alt="Leily Rabbani">Leily Rabbani</a> <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
 
+	</div>
 
 </div>
 
 
+<div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
 
 <img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
-This material is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</div>
+
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+This material is licensed under the Creative Commons Attribution 4.0 International License</a>.
 
 
     </textarea>
@@ -418,7 +528,7 @@ This material is licensed under the <a rel="license" href="https://creativecommo
     <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
     <script type="text/javascript">
-      var slideshow = remark.create({navigation: {scroll: false,}});
+      var slideshow = remark.create({navigation: {scroll: false}, ratio: '16:9'});
       var hljs = remark.highlighter.engine;
       var snippets = document.querySelectorAll('code.remark-code');
         [].forEach.call(snippets,function(snippet){
