@@ -78,7 +78,6 @@
   "priority": 3,
   "tags": [
     "R",
-    "rmarkdown-notebook",
     "jupyter-notebook"
   ],
   "license": "MIT",
